@@ -1,2 +1,5 @@
 /.vs
 /ApprovalRequest/obj
+/ApprovalRequest.Domain/obj
+/ApprovalRequest/bin
+/ApprovalRequest.Domain/bin
