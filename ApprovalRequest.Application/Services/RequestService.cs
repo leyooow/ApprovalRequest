@@ -33,7 +33,6 @@ public class RequestService : IRequestService
         try
         {
             var entity = _mapper.Map<Request>(dto);
-            entity.Status = RequestStatus.Pending;
 
             await _repository.AddAsync(entity);
 
@@ -52,12 +51,6 @@ public class RequestService : IRequestService
 
     }
 
-
-    public Task<Guid> CreateAsync(CreateRequestDto request)
-    {
-        throw new NotImplementedException();
-    }
-
     public Task<ApiResponse<RequestDto>?> GetByIdAsync(Guid id)
     {
         throw new NotImplementedException();
@@ -68,7 +61,7 @@ public class RequestService : IRequestService
         throw new NotImplementedException();
     }
 
-    public async Task<ApiResponse> ApproveAsync(Guid id, ApprovalActionDto request)
+    public async Task<ApiResponse> ApprovalAsync(Guid id, ApprovalActionDto request)
     {
         var response = new ApiResponse();
         try
@@ -83,15 +76,19 @@ public class RequestService : IRequestService
                 return response;
             }
 
+            result.Status = request.ApprovalAction == RequestStatus.Approved
+               ? RequestStatus.Approved
+               : RequestStatus.Rejected;
 
-            result.Status = RequestStatus.Approved;
             result.ReviewedBy = request.ReviewedBy;
 
             await _repository.UpdateAsync(result);
 
             response.Success = true;
             response.StatusCode = 200;
-            response.Message = "Request approved successfully";
+            response.Message = request.ApprovalAction == RequestStatus.Approved
+                ? "Request approved successfully"
+                : "Request rejected successfully";
 
             return response;
         }
@@ -104,8 +101,9 @@ public class RequestService : IRequestService
 
     }
 
-    public Task RejectAsync(Guid id, ApprovalActionDto request)
+    public Task<ApiResponse<RequestDto>> CreateAsync(CreateRequestDto request)
     {
         throw new NotImplementedException();
     }
+
 }

@@ -3,3 +3,8 @@
 /ApprovalRequest.Domain/obj
 /ApprovalRequest/bin
 /ApprovalRequest.Domain/bin
+/ApprovalRequest.Test/bin
+/ApprovalRequest.Test/obj
+/ApprovalRequest.Infrastructure/obj
+/ApprovalRequest.Infrastructure/obj
+/ApprovalRequest.Application/obj

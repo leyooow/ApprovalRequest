@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ApprovalRequest.Domain.Enums;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +9,8 @@ namespace ApprovalRequest.Application.DTOs.Request;
 
 public class ApprovalActionDto
 {
-    public string ReviewedBy { get; set; } = string.Empty;
 
+    public string ReviewedBy { get; set; } = string.Empty;
+    public RequestStatus ApprovalAction { get; set; }
     public string? Reason { get; set; }
 }

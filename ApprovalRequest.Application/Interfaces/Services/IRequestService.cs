@@ -10,13 +10,12 @@ namespace ApprovalRequest.Application.Interfaces.Services;
 
 public interface IRequestService
 {
-    Task<Guid> CreateAsync(CreateRequestDto request);
+    Task<ApiResponse<RequestDto>> CreateAsync(CreateRequestDto request);
 
     Task<ApiResponse<RequestDto>?> GetByIdAsync(Guid id);
 
     Task<PagedResponse<RequestDto>> GetAllAsync(PaginationQuery query);
 
-    Task ApproveAsync(Guid id, ApprovalActionDto request);
+    Task<ApiResponse> ApprovalAsync(Guid id, ApprovalActionDto request);
 
-    Task RejectAsync(Guid id, ApprovalActionDto request);
 }
