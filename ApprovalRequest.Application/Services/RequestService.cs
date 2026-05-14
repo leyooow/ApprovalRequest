@@ -5,6 +5,7 @@ using ApprovalRequest.Application.Interfaces.Services;
 using ApprovalRequest.Domain.Entities;
 using ApprovalRequest.Domain.Enums;
 using AutoMapper;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,18 +18,22 @@ public class RequestService : IRequestService
 {
     private readonly IBaseRepository<Request> _repository;
     private readonly IMapper _mapper;
+    private readonly ILogger<RequestService> _logger;
     public RequestService(
         IBaseRepository<Request> repository,
-        IMapper mapper)
+        IMapper mapper,
+        ILogger<RequestService> logger)
     {
         _repository = repository;
         _mapper = mapper;
+        _logger = logger;
     }
 
-    public async Task<ApiResponse<RequestDto>> CreateAsync(RequestDto dto)
+    public async Task<ApiResponse<RequestDto>> CreateAsync(CreateRequestDto dto)
     {
 
         var response = new ApiResponse<RequestDto>();
+        _logger.LogInformation("Creating request {RequestTitle}", dto.Title);
 
         try
         {
@@ -41,29 +46,78 @@ public class RequestService : IRequestService
             response.StatusCode = 201;
             response.Message = "Request created successfully";
 
+            _logger.LogInformation("Request created successfully {RequestTitle}", dto.Title);
             return response;
         }
         catch (Exception ex)
         {
             response.Message = $"An error occurred: {ex.Message}";
+            _logger.LogError(ex, "Error creating request {RequestTitle}", dto.Title);
+
             return response;
         }
 
     }
 
-    public Task<ApiResponse<RequestDto>?> GetByIdAsync(Guid id)
+    public async Task<ApiResponse<RequestDto>?> GetByIdAsync(Guid id)
     {
-        throw new NotImplementedException();
+        var response = new ApiResponse<RequestDto>();
+        _logger.LogInformation("Retrieving request {id}", id);
+
+        try
+        {
+
+            var result = await _repository.GetByIdAsync(id);
+            if (result == null)
+            {
+                response.StatusCode = 404;
+                response.Message = "Request not found";
+                _logger.LogWarning("Request {id} not found", id);
+                return response;
+            }
+            response.Data = _mapper.Map<RequestDto>(result);
+            response.Success = true;
+            response.StatusCode = 200;
+            response.Message = "Request retrieved successfully";
+            _logger.LogInformation("Request {id} retrieved successfully", id);
+            return response;
+
+        }
+        catch (Exception ex)
+        {
+            response.Message = $"An error occurred: {ex.Message}";
+            _logger.LogError(ex, "Error retrieving request {id}", id);
+            return response;
+        }
     }
 
     public Task<PagedResponse<RequestDto>> GetAllAsync(PaginationQuery query)
     {
-        throw new NotImplementedException();
+        var response = new PagedResponse<RequestDto>();
+        _logger.LogInformation("Retrieving all requests with pagination: PageNumber={PageNumber}, PageSize={PageSize}", query.PageNumber, query.PageSize);
+
+        try
+        {
+
+
+        }
+        catch (Exception ex)
+        {
+            response.Message = $"An error occurred: {ex.Message}";
+            _logger.LogError(ex, "Error retrieving requests with pagination: PageNumber={PageNumber}, PageSize={PageSize}", query.PageNumber, query.PageSize);
+
+
+
+        }
     }
 
     public async Task<ApiResponse> ApprovalAsync(Guid id, ApprovalActionDto request)
     {
         var response = new ApiResponse();
+        _logger.LogInformation(
+            request.ApprovalAction == RequestStatus.Approved
+            ? "Approving request {id}"
+            : "Rejecting request {id}", id);
         try
         {
             var result = await _repository.GetByIdAsync(id);
@@ -90,20 +144,24 @@ public class RequestService : IRequestService
                 ? "Request approved successfully"
                 : "Request rejected successfully";
 
+            _logger.LogInformation(
+            request.ApprovalAction == RequestStatus.Approved
+            ? "Request approved successfully"
+            : "Request rejected successfully", id);
+
+
+
             return response;
         }
         catch (Exception ex)
         {
             response.Message = $"An error occurred: {ex.Message}";
+            _logger.LogError(ex, "Error processing request {id}", id);
             return response;
         }
 
 
     }
 
-    public Task<ApiResponse<RequestDto>> CreateAsync(CreateRequestDto request)
-    {
-        throw new NotImplementedException();
-    }
 
 }

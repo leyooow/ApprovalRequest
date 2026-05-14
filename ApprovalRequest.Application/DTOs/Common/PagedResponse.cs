@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace ApprovalRequest.Application.DTOs.Common;
-public class PagedResponse<T>
+public class PagedResponse<T> : ApiResponse
 {
     public IEnumerable<T> Items { get; set; } = [];
 

@@ -1,10 +1,11 @@
 /.vs
 /ApprovalRequest/obj
-/ApprovalRequest.Domain/obj
 /ApprovalRequest/bin
+/ApprovalRequest.Domain/obj
 /ApprovalRequest.Domain/bin
 /ApprovalRequest.Test/bin
 /ApprovalRequest.Test/obj
 /ApprovalRequest.Infrastructure/obj
-/ApprovalRequest.Infrastructure/obj
+/ApprovalRequest.Infrastructure/bin
 /ApprovalRequest.Application/obj
+/ApprovalRequest.Application/bin

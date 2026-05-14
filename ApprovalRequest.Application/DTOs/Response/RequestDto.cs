@@ -8,8 +8,7 @@ using System.Threading.Tasks;
 namespace ApprovalRequest.Application.DTOs.Common;
 public class RequestDto
 {
-    public Guid Id { get; set; }
-
+   
     public required string Title { get; set; }
 
     public string? Description { get; set; }

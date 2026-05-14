@@ -9,12 +9,12 @@ using System.Threading.Tasks;
 
 namespace ApprovalRequest.Infrastructure.Repositories;
 
-public class Repository<T> : IRepository<T> where T : class
+public class BaseRepository<T> : IBaseRepository<T> where T : class
 {
     protected readonly AppDbContext _context;
     protected readonly DbSet<T> _dbSet;
 
-    public Repository(AppDbContext context)
+    public BaseRepository(AppDbContext context)
     {
         _context = context;
         _dbSet = context.Set<T>();

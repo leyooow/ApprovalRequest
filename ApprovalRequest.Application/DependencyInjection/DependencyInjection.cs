@@ -1,5 +1,7 @@
 ﻿using ApprovalRequest.Application.Interfaces.Services;
 using ApprovalRequest.Application.Services;
+using ApprovalRequest.Application.Validators;
+using FluentValidation;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -14,7 +16,7 @@ public static class DependencyInjection
     public static IServiceCollection AddApplication(
         this IServiceCollection services)
     {
-        services.AddScoped(typeof(IBaseService<,>), typeof(BaseService<,>));
+        services.AddValidatorsFromAssemblyContaining<CreateRequestValidator>();
 
 
         return services;
