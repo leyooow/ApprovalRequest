@@ -19,7 +19,7 @@ public static class DependencyInjection
                 configuration.GetConnectionString("ApprovalSystemDB")));
 
 
-        services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+        services.AddScoped(typeof(IBaseRepository<>), typeof(BaseRepository<>));
 
         return services;
     }
