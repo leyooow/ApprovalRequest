@@ -48,9 +48,9 @@ public class ApprovalController : ControllerBase
     /// </summary>
     [HttpGet]
     [ProducesResponseType(typeof(PagedResponse<RequestDto>), StatusCodes.Status200OK)]
-    public async Task<IActionResult> GetAll([FromQuery] PaginationQuery query)
+    public async Task<IActionResult> GetPaginatedDataAsync(int pageNumber = 1, int pageSize = 10)
     {
-        var result = await _requestService.GetPaginatedDataAsync(query.PageNumber, query.PageSize);
+        var result = await _requestService.GetPaginatedDataAsync(pageNumber, pageSize);
 
         return StatusCode(result.StatusCode, result);
     }

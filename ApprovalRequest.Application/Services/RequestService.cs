@@ -141,6 +141,7 @@ public class RequestService : IRequestService
                : RequestStatus.Rejected;
 
             result.ReviewedBy = request.ReviewedBy;
+            result.DateReviewed = DateTime.Now;
 
             await _repository.UpdateAsync(result);
 
