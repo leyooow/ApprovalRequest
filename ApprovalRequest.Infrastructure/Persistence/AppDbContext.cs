@@ -43,7 +43,7 @@ public class AppDbContext : DbContext
             entity.Property(x => x.ReviewedBy)
                 .HasMaxLength(100);
 
-            entity.Property(x => x.RejectionReason)
+            entity.Property(x => x.Remarks)
                 .HasMaxLength(500);
 
             entity.Property(x => x.Status)

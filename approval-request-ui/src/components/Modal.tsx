@@ -1,60 +1,64 @@
-import { useState } from "react";
+import type { ReactNode } from "react";
 
 type Props = {
   open: boolean;
+  title: string;
+  children: ReactNode;
   onClose: () => void;
-  onSubmit: (data: { title: string; submitted_by: string }) => void;
+  onSubmit?: () => void;
+  submitText?: string;
+  cancelText?: string;
+  submitDisabled?: boolean;
 };
 
-export default function Modal({ open, onClose, onSubmit }: Props) {
-  const [title, setTitle] = useState("");
-  const [submittedBy, setSubmittedBy] = useState("");
-
+export default function BaseModal({
+  open,
+  title,
+  children,
+  onClose,
+  onSubmit,
+  submitText = "Submit",
+  cancelText = "Cancel",
+  submitDisabled = false,
+}: Props) {
   if (!open) return null;
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    onSubmit({ title, submitted_by: submittedBy });
-    setTitle("");
-    setSubmittedBy("");
-    onClose();
-  };
-
   return (
-    <div className="fixed inset-0 bg-black/30 flex justify-center items-center">
-      <form
-        onSubmit={handleSubmit}
-        className="bg-white p-6 rounded-xl w-96"
-      >
-        <h2 className="mb-4 font-bold text-lg">New Request</h2>
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm p-4">
+      <div className="w-full max-w-md rounded-2xl bg-white shadow-2xl animate-in fade-in zoom-in-95">
 
-        <input
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
-          placeholder="Title"
-          className="w-full mb-3 border p-2 rounded"
-        />
-
-        <input
-          value={submittedBy}
-          onChange={(e) => setSubmittedBy(e.target.value)}
-          placeholder="Submitted by"
-          className="w-full mb-4 border p-2 rounded"
-        />
-
-        <div className="flex gap-2">
-          <button className="bg-sky-500 text-white px-4 py-2 rounded w-full">
-            Submit
-          </button>
-          <button
-            type="button"
-            onClick={onClose}
-            className="bg-gray-200 px-4 py-2 rounded w-full"
-          >
-            Cancel
-          </button>
+        {/* Header */}
+        <div className="border-b border-gray-100 px-6 py-4">
+          <h2 className="text-xl font-bold text-gray-800">
+            {title}
+          </h2>
         </div>
-      </form>
+
+        {/* Body */}
+        <div className="px-6 py-5">
+          {children}
+        </div>
+
+        {/* Footer */}
+        <div className="flex justify-end gap-3 border-t border-gray-100 px-6 py-4">
+          <button
+            onClick={onClose}
+            className="rounded-xl border border-gray-200 px-4 py-2 text-gray-600 transition hover:bg-gray-100"
+          >
+            {cancelText}
+          </button>
+
+          {onSubmit && (
+            <button
+              onClick={onSubmit}
+              disabled={submitDisabled}
+              className="rounded-xl bg-sky-500 px-5 py-2 font-medium text-white transition hover:bg-sky-600 disabled:cursor-not-allowed disabled:opacity-50"
+            >
+              {submitText}
+            </button>
+          )}
+        </div>
+      </div>
     </div>
   );
 }

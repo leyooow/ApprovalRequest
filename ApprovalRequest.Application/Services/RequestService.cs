@@ -142,6 +142,7 @@ public class RequestService : IRequestService
 
             result.ReviewedBy = request.ReviewedBy;
             result.DateReviewed = DateTime.Now;
+            result.Remarks = request.Remarks;
 
             await _repository.UpdateAsync(result);
 

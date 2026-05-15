@@ -12,5 +12,5 @@ public class ApprovalActionDto
 
     public string ReviewedBy { get; set; } = string.Empty;
     public RequestStatus ApprovalAction { get; set; }
-    public string? Reason { get; set; }
+    public string? Remarks { get; set; }
 }

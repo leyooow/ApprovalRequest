@@ -21,7 +21,7 @@ public class Request
 
     public string? ReviewedBy { get; set; }
 
-    public string? RejectionReason { get; set; }
+    public string? Remarks { get; set; }
 
     public DateTime DateCreated { get; set; } = DateTime.UtcNow;
 

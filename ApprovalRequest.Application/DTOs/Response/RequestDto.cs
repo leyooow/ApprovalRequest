@@ -9,17 +9,17 @@ namespace ApprovalRequest.Application.DTOs.Common;
 public class RequestDto
 {
     public Guid Id { get; set; }
-    public required string Title { get; set; }
+    public string? Title { get; set; }
 
     public string? Description { get; set; }
 
-    public required string RequestedBy { get; set; }
+    public string? RequestedBy { get; set; }
 
     public RequestStatus Status { get; set; }
 
     public string? ReviewedBy { get; set; }
 
-    public string? RejectionReason { get; set; }
+    public string? Remarks { get; set; }
 
     public DateTime DateCreated { get; set; }
 
