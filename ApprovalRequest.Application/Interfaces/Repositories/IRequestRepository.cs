@@ -1,4 +1,5 @@
-﻿using ApprovalRequest.Domain.Entities;
+﻿using ApprovalRequest.Application.DTOs.Common;
+using ApprovalRequest.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,5 +10,5 @@ namespace ApprovalRequest.Application.Interfaces.Repositories;
 
 public interface IRequestRepository : IBaseRepository<Request>
 {
-    Task<List<Request>> GetAllWithDetailsAsync(int pageNumber, int pageSize);
+    Task<PagedResponse<Request>> GetPaginatedDataAsync(int pageNumber, int pageSize);
 }

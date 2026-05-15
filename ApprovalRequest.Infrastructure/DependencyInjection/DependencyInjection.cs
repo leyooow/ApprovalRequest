@@ -1,4 +1,6 @@
 ﻿using ApprovalRequest.Application.Interfaces.Repositories;
+using ApprovalRequest.Application.Interfaces.Services;
+using ApprovalRequest.Application.Services;
 using ApprovalRequest.Infrastructure.Persistence;
 using ApprovalRequest.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
@@ -20,6 +22,8 @@ public static class DependencyInjection
 
 
         services.AddScoped(typeof(IBaseRepository<>), typeof(BaseRepository<>));
+        services.AddScoped<IRequestRepository, RequestRepository>();
+
 
         return services;
     }

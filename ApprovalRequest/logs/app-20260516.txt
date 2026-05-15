@@ -1,0 +1,976 @@
+2026-05-16 03:13:59.574 +08:00 [INF] Now listening on: https://localhost:7216
+2026-05-16 03:13:59.598 +08:00 [INF] Now listening on: http://localhost:5105
+2026-05-16 03:13:59.655 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-05-16 03:13:59.656 +08:00 [INF] Hosting environment: Development
+2026-05-16 03:13:59.657 +08:00 [INF] Content root path: C:\Users\LEO\Documents\GitHub\ApprovalRequest\ApprovalRequest
+2026-05-16 03:14:00.319 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7216/swagger - null null
+2026-05-16 03:14:00.490 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7216/swagger - 301 0 null 170.9791ms
+2026-05-16 03:14:00.500 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7216/swagger/index.html - null null
+2026-05-16 03:14:00.575 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7216/swagger/index.html - 200 null text/html;charset=utf-8 74.949ms
+2026-05-16 03:14:00.583 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7216/swagger/swagger-ui.css - null null
+2026-05-16 03:14:00.583 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7216/swagger/swagger-ui-bundle.js - null null
+2026-05-16 03:14:00.583 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7216/swagger/swagger-ui-standalone-preset.js - null null
+2026-05-16 03:14:00.594 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7216/_framework/aspnetcore-browser-refresh.js - null null
+2026-05-16 03:14:00.595 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7216/_vs/browserLink - null null
+2026-05-16 03:14:00.607 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7216/_framework/aspnetcore-browser-refresh.js - 200 16515 application/javascript; charset=utf-8 12.7994ms
+2026-05-16 03:14:00.615 +08:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2026-05-16 03:14:00.624 +08:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2026-05-16 03:14:00.645 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7216/swagger/swagger-ui.css - 200 152034 text/css 61.7443ms
+2026-05-16 03:14:00.649 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7216/swagger/swagger-ui-standalone-preset.js - 200 230280 text/javascript 65.6027ms
+2026-05-16 03:14:00.662 +08:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2026-05-16 03:14:00.667 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7216/swagger/swagger-ui-bundle.js - 200 1456926 text/javascript 83.9596ms
+2026-05-16 03:14:00.672 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7216/_vs/browserLink - 200 null text/javascript; charset=UTF-8 76.5754ms
+2026-05-16 03:14:00.932 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7216/swagger/v1/swagger.json - null null
+2026-05-16 03:14:00.950 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7216/swagger/favicon-32x32.png - null null
+2026-05-16 03:14:00.960 +08:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2026-05-16 03:14:00.962 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7216/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 29.9831ms
+2026-05-16 03:14:00.963 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7216/swagger/favicon-32x32.png - 200 628 image/png 13.1602ms
+2026-05-16 03:14:15.474 +08:00 [INF] Request starting HTTP/2 POST https://localhost:7216/api/Approval - application/json 62
+2026-05-16 03:14:15.482 +08:00 [INF] Executing endpoint 'ApprovalRequest.Controllers.ApprovalController.Create (ApprovalRequest)'
+2026-05-16 03:14:15.503 +08:00 [INF] Route matched with {action = "Create", controller = "Approval"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(ApprovalRequest.Application.DTOs.Request.CreateRequestDto) on controller ApprovalRequest.Controllers.ApprovalController (ApprovalRequest).
+2026-05-16 03:14:15.509 +08:00 [INF] Executed action ApprovalRequest.Controllers.ApprovalController.Create (ApprovalRequest) in 2.02ms
+2026-05-16 03:14:15.511 +08:00 [INF] Executed endpoint 'ApprovalRequest.Controllers.ApprovalController.Create (ApprovalRequest)'
+2026-05-16 03:14:15.513 +08:00 [ERR] HTTP POST /api/Approval responded 500 in 33.5565 ms
+System.InvalidOperationException: Unable to resolve service for type 'ApprovalRequest.Application.Interfaces.Services.IRequestService' while attempting to activate 'ApprovalRequest.Controllers.ApprovalController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method9(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-05-16 03:14:15.533 +08:00 [ERR] Unable to resolve service for type 'ApprovalRequest.Application.Interfaces.Services.IRequestService' while attempting to activate 'ApprovalRequest.Controllers.ApprovalController'.
+System.InvalidOperationException: Unable to resolve service for type 'ApprovalRequest.Application.Interfaces.Services.IRequestService' while attempting to activate 'ApprovalRequest.Controllers.ApprovalController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method9(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at ApprovalRequest.Middleware.ExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\LEO\Documents\GitHub\ApprovalRequest\ApprovalRequest\Middleware\ExceptionMiddleware.cs:line 20
+2026-05-16 03:14:15.554 +08:00 [INF] Request finished HTTP/2 POST https://localhost:7216/api/Approval - 500 null application/json; charset=utf-8 79.0125ms
+2026-05-16 03:14:29.061 +08:00 [INF] Now listening on: https://localhost:7216
+2026-05-16 03:14:29.087 +08:00 [INF] Now listening on: http://localhost:5105
+2026-05-16 03:14:29.163 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-05-16 03:14:29.164 +08:00 [INF] Hosting environment: Development
+2026-05-16 03:14:29.165 +08:00 [INF] Content root path: C:\Users\LEO\Documents\GitHub\ApprovalRequest\ApprovalRequest
+2026-05-16 03:14:29.415 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7216/swagger/index.html - null null
+2026-05-16 03:14:29.574 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7216/swagger/index.html - 200 null text/html;charset=utf-8 166.4931ms
+2026-05-16 03:14:29.584 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7216/_framework/aspnetcore-browser-refresh.js - null null
+2026-05-16 03:14:29.592 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7216/_vs/browserLink - null null
+2026-05-16 03:14:29.594 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7216/_framework/aspnetcore-browser-refresh.js - 200 16515 application/javascript; charset=utf-8 10.4319ms
+2026-05-16 03:14:29.634 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7216/_vs/browserLink - 200 null text/javascript; charset=UTF-8 42.5846ms
+2026-05-16 03:14:29.791 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7216/swagger/v1/swagger.json - null null
+2026-05-16 03:14:29.809 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7216/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 17.8934ms
+2026-05-16 03:14:37.236 +08:00 [INF] Request starting HTTP/2 POST https://localhost:7216/api/Approval - application/json 80
+2026-05-16 03:14:37.244 +08:00 [INF] Executing endpoint 'ApprovalRequest.Controllers.ApprovalController.Create (ApprovalRequest)'
+2026-05-16 03:14:37.277 +08:00 [INF] Route matched with {action = "Create", controller = "Approval"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(ApprovalRequest.Application.DTOs.Request.CreateRequestDto) on controller ApprovalRequest.Controllers.ApprovalController (ApprovalRequest).
+2026-05-16 03:14:37.286 +08:00 [INF] Executed action ApprovalRequest.Controllers.ApprovalController.Create (ApprovalRequest) in 2.3213ms
+2026-05-16 03:14:37.288 +08:00 [INF] Executed endpoint 'ApprovalRequest.Controllers.ApprovalController.Create (ApprovalRequest)'
+2026-05-16 03:14:37.292 +08:00 [ERR] HTTP POST /api/Approval responded 500 in 48.1458 ms
+System.InvalidOperationException: Unable to resolve service for type 'ApprovalRequest.Application.Interfaces.Services.IRequestService' while attempting to activate 'ApprovalRequest.Controllers.ApprovalController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method9(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-05-16 03:14:37.361 +08:00 [ERR] Unable to resolve service for type 'ApprovalRequest.Application.Interfaces.Services.IRequestService' while attempting to activate 'ApprovalRequest.Controllers.ApprovalController'.
+System.InvalidOperationException: Unable to resolve service for type 'ApprovalRequest.Application.Interfaces.Services.IRequestService' while attempting to activate 'ApprovalRequest.Controllers.ApprovalController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method9(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at ApprovalRequest.Middleware.ExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\LEO\Documents\GitHub\ApprovalRequest\ApprovalRequest\Middleware\ExceptionMiddleware.cs:line 20
+2026-05-16 03:14:37.380 +08:00 [INF] Request finished HTTP/2 POST https://localhost:7216/api/Approval - 500 null application/json; charset=utf-8 143.9875ms
+2026-05-16 03:14:39.323 +08:00 [INF] Request starting HTTP/2 POST https://localhost:7216/api/Approval - application/json 80
+2026-05-16 03:14:39.326 +08:00 [INF] Executing endpoint 'ApprovalRequest.Controllers.ApprovalController.Create (ApprovalRequest)'
+2026-05-16 03:14:39.328 +08:00 [INF] Route matched with {action = "Create", controller = "Approval"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(ApprovalRequest.Application.DTOs.Request.CreateRequestDto) on controller ApprovalRequest.Controllers.ApprovalController (ApprovalRequest).
+2026-05-16 03:14:39.330 +08:00 [INF] Executed action ApprovalRequest.Controllers.ApprovalController.Create (ApprovalRequest) in 0.5385ms
+2026-05-16 03:14:39.332 +08:00 [INF] Executed endpoint 'ApprovalRequest.Controllers.ApprovalController.Create (ApprovalRequest)'
+2026-05-16 03:14:39.334 +08:00 [ERR] HTTP POST /api/Approval responded 500 in 7.6557 ms
+System.InvalidOperationException: Unable to resolve service for type 'ApprovalRequest.Application.Interfaces.Services.IRequestService' while attempting to activate 'ApprovalRequest.Controllers.ApprovalController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method9(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-05-16 03:14:39.351 +08:00 [ERR] Unable to resolve service for type 'ApprovalRequest.Application.Interfaces.Services.IRequestService' while attempting to activate 'ApprovalRequest.Controllers.ApprovalController'.
+System.InvalidOperationException: Unable to resolve service for type 'ApprovalRequest.Application.Interfaces.Services.IRequestService' while attempting to activate 'ApprovalRequest.Controllers.ApprovalController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method9(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at ApprovalRequest.Middleware.ExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\LEO\Documents\GitHub\ApprovalRequest\ApprovalRequest\Middleware\ExceptionMiddleware.cs:line 20
+2026-05-16 03:14:39.356 +08:00 [INF] Request finished HTTP/2 POST https://localhost:7216/api/Approval - 500 null application/json; charset=utf-8 33.7529ms
+2026-05-16 03:14:39.838 +08:00 [INF] Request starting HTTP/2 POST https://localhost:7216/api/Approval - application/json 80
+2026-05-16 03:14:39.842 +08:00 [INF] Executing endpoint 'ApprovalRequest.Controllers.ApprovalController.Create (ApprovalRequest)'
+2026-05-16 03:14:39.843 +08:00 [INF] Route matched with {action = "Create", controller = "Approval"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(ApprovalRequest.Application.DTOs.Request.CreateRequestDto) on controller ApprovalRequest.Controllers.ApprovalController (ApprovalRequest).
+2026-05-16 03:14:39.845 +08:00 [INF] Executed action ApprovalRequest.Controllers.ApprovalController.Create (ApprovalRequest) in 0.643ms
+2026-05-16 03:14:39.847 +08:00 [INF] Executed endpoint 'ApprovalRequest.Controllers.ApprovalController.Create (ApprovalRequest)'
+2026-05-16 03:14:39.849 +08:00 [ERR] HTTP POST /api/Approval responded 500 in 7.4632 ms
+System.InvalidOperationException: Unable to resolve service for type 'ApprovalRequest.Application.Interfaces.Services.IRequestService' while attempting to activate 'ApprovalRequest.Controllers.ApprovalController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method9(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-05-16 03:14:39.870 +08:00 [ERR] Unable to resolve service for type 'ApprovalRequest.Application.Interfaces.Services.IRequestService' while attempting to activate 'ApprovalRequest.Controllers.ApprovalController'.
+System.InvalidOperationException: Unable to resolve service for type 'ApprovalRequest.Application.Interfaces.Services.IRequestService' while attempting to activate 'ApprovalRequest.Controllers.ApprovalController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method9(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at ApprovalRequest.Middleware.ExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\LEO\Documents\GitHub\ApprovalRequest\ApprovalRequest\Middleware\ExceptionMiddleware.cs:line 20
+2026-05-16 03:14:39.874 +08:00 [INF] Request finished HTTP/2 POST https://localhost:7216/api/Approval - 500 null application/json; charset=utf-8 36.3359ms
+2026-05-16 03:14:40.012 +08:00 [INF] Request starting HTTP/2 POST https://localhost:7216/api/Approval - application/json 80
+2026-05-16 03:14:40.015 +08:00 [INF] Executing endpoint 'ApprovalRequest.Controllers.ApprovalController.Create (ApprovalRequest)'
+2026-05-16 03:14:40.016 +08:00 [INF] Route matched with {action = "Create", controller = "Approval"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(ApprovalRequest.Application.DTOs.Request.CreateRequestDto) on controller ApprovalRequest.Controllers.ApprovalController (ApprovalRequest).
+2026-05-16 03:14:40.019 +08:00 [INF] Executed action ApprovalRequest.Controllers.ApprovalController.Create (ApprovalRequest) in 0.5322ms
+2026-05-16 03:14:40.021 +08:00 [INF] Executed endpoint 'ApprovalRequest.Controllers.ApprovalController.Create (ApprovalRequest)'
+2026-05-16 03:14:40.022 +08:00 [ERR] HTTP POST /api/Approval responded 500 in 7.0404 ms
+System.InvalidOperationException: Unable to resolve service for type 'ApprovalRequest.Application.Interfaces.Services.IRequestService' while attempting to activate 'ApprovalRequest.Controllers.ApprovalController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method9(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-05-16 03:14:40.039 +08:00 [ERR] Unable to resolve service for type 'ApprovalRequest.Application.Interfaces.Services.IRequestService' while attempting to activate 'ApprovalRequest.Controllers.ApprovalController'.
+System.InvalidOperationException: Unable to resolve service for type 'ApprovalRequest.Application.Interfaces.Services.IRequestService' while attempting to activate 'ApprovalRequest.Controllers.ApprovalController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method9(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at ApprovalRequest.Middleware.ExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\LEO\Documents\GitHub\ApprovalRequest\ApprovalRequest\Middleware\ExceptionMiddleware.cs:line 20
+2026-05-16 03:14:40.044 +08:00 [INF] Request finished HTTP/2 POST https://localhost:7216/api/Approval - 500 null application/json; charset=utf-8 32.1887ms
+2026-05-16 03:15:13.309 +08:00 [INF] Now listening on: https://localhost:7216
+2026-05-16 03:15:13.334 +08:00 [INF] Now listening on: http://localhost:5105
+2026-05-16 03:15:13.476 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-05-16 03:15:13.477 +08:00 [INF] Hosting environment: Development
+2026-05-16 03:15:13.478 +08:00 [INF] Content root path: C:\Users\LEO\Documents\GitHub\ApprovalRequest\ApprovalRequest
+2026-05-16 03:15:13.972 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7216/swagger/index.html - null null
+2026-05-16 03:15:14.136 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7216/swagger/index.html - 200 null text/html;charset=utf-8 169.488ms
+2026-05-16 03:15:14.153 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7216/_vs/browserLink - null null
+2026-05-16 03:15:14.153 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7216/_framework/aspnetcore-browser-refresh.js - null null
+2026-05-16 03:15:14.164 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7216/_framework/aspnetcore-browser-refresh.js - 200 16515 application/javascript; charset=utf-8 10.8636ms
+2026-05-16 03:15:14.202 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7216/_vs/browserLink - 200 null text/javascript; charset=UTF-8 48.394ms
+2026-05-16 03:15:14.296 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7216/swagger/v1/swagger.json - null null
+2026-05-16 03:15:14.313 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7216/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 17.8636ms
+2026-05-16 03:15:18.652 +08:00 [INF] Request starting HTTP/2 POST https://localhost:7216/api/Approval - application/json 62
+2026-05-16 03:15:18.661 +08:00 [INF] Executing endpoint 'ApprovalRequest.Controllers.ApprovalController.Create (ApprovalRequest)'
+2026-05-16 03:15:18.679 +08:00 [INF] Route matched with {action = "Create", controller = "Approval"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(ApprovalRequest.Application.DTOs.Request.CreateRequestDto) on controller ApprovalRequest.Controllers.ApprovalController (ApprovalRequest).
+2026-05-16 03:15:18.685 +08:00 [INF] Executed action ApprovalRequest.Controllers.ApprovalController.Create (ApprovalRequest) in 1.9208ms
+2026-05-16 03:15:18.687 +08:00 [INF] Executed endpoint 'ApprovalRequest.Controllers.ApprovalController.Create (ApprovalRequest)'
+2026-05-16 03:15:18.689 +08:00 [ERR] HTTP POST /api/Approval responded 500 in 29.3491 ms
+System.InvalidOperationException: Unable to resolve service for type 'ApprovalRequest.Application.Interfaces.Services.IRequestService' while attempting to activate 'ApprovalRequest.Controllers.ApprovalController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method9(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-05-16 03:15:18.736 +08:00 [ERR] Unable to resolve service for type 'ApprovalRequest.Application.Interfaces.Services.IRequestService' while attempting to activate 'ApprovalRequest.Controllers.ApprovalController'.
+System.InvalidOperationException: Unable to resolve service for type 'ApprovalRequest.Application.Interfaces.Services.IRequestService' while attempting to activate 'ApprovalRequest.Controllers.ApprovalController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method9(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at ApprovalRequest.Middleware.ExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\LEO\Documents\GitHub\ApprovalRequest\ApprovalRequest\Middleware\ExceptionMiddleware.cs:line 20
+2026-05-16 03:15:18.755 +08:00 [INF] Request finished HTTP/2 POST https://localhost:7216/api/Approval - 500 null application/json; charset=utf-8 102.318ms
+2026-05-16 03:16:39.223 +08:00 [INF] Request starting HTTP/2 POST https://localhost:7216/api/Approval - application/json 62
+2026-05-16 03:16:39.234 +08:00 [INF] Executing endpoint 'ApprovalRequest.Controllers.ApprovalController.Create (ApprovalRequest)'
+2026-05-16 03:16:39.235 +08:00 [INF] Route matched with {action = "Create", controller = "Approval"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(ApprovalRequest.Application.DTOs.Request.CreateRequestDto) on controller ApprovalRequest.Controllers.ApprovalController (ApprovalRequest).
+2026-05-16 03:16:39.237 +08:00 [INF] Executed action ApprovalRequest.Controllers.ApprovalController.Create (ApprovalRequest) in 0.5239ms
+2026-05-16 03:16:39.239 +08:00 [INF] Executed endpoint 'ApprovalRequest.Controllers.ApprovalController.Create (ApprovalRequest)'
+2026-05-16 03:16:39.240 +08:00 [ERR] HTTP POST /api/Approval responded 500 in 6.2235 ms
+System.InvalidOperationException: Unable to resolve service for type 'ApprovalRequest.Application.Interfaces.Services.IRequestService' while attempting to activate 'ApprovalRequest.Controllers.ApprovalController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method9(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-05-16 03:16:39.255 +08:00 [ERR] Unable to resolve service for type 'ApprovalRequest.Application.Interfaces.Services.IRequestService' while attempting to activate 'ApprovalRequest.Controllers.ApprovalController'.
+System.InvalidOperationException: Unable to resolve service for type 'ApprovalRequest.Application.Interfaces.Services.IRequestService' while attempting to activate 'ApprovalRequest.Controllers.ApprovalController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method9(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at ApprovalRequest.Middleware.ExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\LEO\Documents\GitHub\ApprovalRequest\ApprovalRequest\Middleware\ExceptionMiddleware.cs:line 20
+2026-05-16 03:16:39.259 +08:00 [INF] Request finished HTTP/2 POST https://localhost:7216/api/Approval - 500 null application/json; charset=utf-8 35.9962ms
+2026-05-16 03:25:15.195 +08:00 [INF] Now listening on: https://localhost:7216
+2026-05-16 03:25:15.219 +08:00 [INF] Now listening on: http://localhost:5105
+2026-05-16 03:25:15.276 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-05-16 03:25:15.277 +08:00 [INF] Hosting environment: Development
+2026-05-16 03:25:15.277 +08:00 [INF] Content root path: C:\Users\LEO\Documents\GitHub\ApprovalRequest\ApprovalRequest
+2026-05-16 03:25:15.589 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7216/swagger/index.html - null null
+2026-05-16 03:25:15.753 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7216/swagger/index.html - 200 null text/html;charset=utf-8 169.6694ms
+2026-05-16 03:25:15.757 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7216/_framework/aspnetcore-browser-refresh.js - null null
+2026-05-16 03:25:15.765 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7216/_framework/aspnetcore-browser-refresh.js - 200 16515 application/javascript; charset=utf-8 8.0257ms
+2026-05-16 03:25:15.771 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7216/_vs/browserLink - null null
+2026-05-16 03:25:15.815 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7216/_vs/browserLink - 200 null text/javascript; charset=UTF-8 44.1734ms
+2026-05-16 03:25:15.911 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7216/swagger/v1/swagger.json - null null
+2026-05-16 03:25:15.924 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7216/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 12.4752ms
+2026-05-16 03:25:22.889 +08:00 [INF] Request starting HTTP/2 POST https://localhost:7216/api/Approval - application/json 62
+2026-05-16 03:25:22.898 +08:00 [INF] Executing endpoint 'ApprovalRequest.Controllers.ApprovalController.Create (ApprovalRequest)'
+2026-05-16 03:25:22.920 +08:00 [INF] Route matched with {action = "Create", controller = "Approval"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(ApprovalRequest.Application.DTOs.Request.CreateRequestDto) on controller ApprovalRequest.Controllers.ApprovalController (ApprovalRequest).
+2026-05-16 03:25:23.672 +08:00 [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-05-16 03:25:25.673 +08:00 [INF] Creating request 1
+2026-05-16 03:25:26.211 +08:00 [ERR] Failed executing DbCommand (48ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (Size = 2000), @p4='?' (Size = 500), @p5='?' (Size = 100), @p6='?' (Size = 100), @p7='?' (DbType = Int32), @p8='?' (Size = 200)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Requests] ([Id], [DateCreated], [DateReviewed], [Description], [RejectionReason], [RequestedBy], [ReviewedBy], [Status], [Title])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+2026-05-16 03:25:26.241 +08:00 [ERR] An exception occurred in the database while saving changes for context type 'ApprovalRequest.Infrastructure.Persistence.AppDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'DateCreated'.
+Invalid column name 'DateReviewed'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:cd25f252-9725-4f85-b2ae-dbeb533ea6e8
+Error Number:207,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'DateCreated'.
+Invalid column name 'DateReviewed'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:cd25f252-9725-4f85-b2ae-dbeb533ea6e8
+Error Number:207,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2026-05-16 03:25:26.292 +08:00 [ERR] Error creating request 1
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'DateCreated'.
+Invalid column name 'DateReviewed'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:cd25f252-9725-4f85-b2ae-dbeb533ea6e8
+Error Number:207,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at ApprovalRequest.Infrastructure.Repositories.BaseRepository`1.AddAsync(T entity) in C:\Users\LEO\Documents\GitHub\ApprovalRequest\ApprovalRequest.Infrastructure\Repositories\BaseRepository.cs:line 26
+   at ApprovalRequest.Application.Services.RequestService.CreateAsync(CreateRequestDto dto) in C:\Users\LEO\Documents\GitHub\ApprovalRequest\ApprovalRequest.Application\Services\RequestService.cs:line 42
+2026-05-16 03:25:26.319 +08:00 [INF] Executing ObjectResult, writing value of type 'ApprovalRequest.Application.DTOs.Common.ApiResponse`1[[ApprovalRequest.Application.DTOs.Common.RequestDto, ApprovalRequest.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-05-16 03:25:26.332 +08:00 [INF] Executed action ApprovalRequest.Controllers.ApprovalController.Create (ApprovalRequest) in 3406.8046ms
+2026-05-16 03:25:26.334 +08:00 [INF] Executed endpoint 'ApprovalRequest.Controllers.ApprovalController.Create (ApprovalRequest)'
+2026-05-16 03:25:26.336 +08:00 [ERR] HTTP POST /api/Approval responded 500 in 3439.3849 ms
+2026-05-16 03:25:26.342 +08:00 [INF] Request finished HTTP/2 POST https://localhost:7216/api/Approval - 500 null application/json; charset=utf-8 3453.3915ms
+2026-05-16 03:25:35.322 +08:00 [INF] Request starting HTTP/2 POST https://localhost:7216/api/Approval - application/json 62
+2026-05-16 03:25:35.325 +08:00 [INF] Executing endpoint 'ApprovalRequest.Controllers.ApprovalController.Create (ApprovalRequest)'
+2026-05-16 03:25:35.327 +08:00 [INF] Route matched with {action = "Create", controller = "Approval"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(ApprovalRequest.Application.DTOs.Request.CreateRequestDto) on controller ApprovalRequest.Controllers.ApprovalController (ApprovalRequest).
+2026-05-16 03:25:40.576 +08:00 [INF] Creating request 1
+2026-05-16 03:25:49.863 +08:00 [ERR] Failed executing DbCommand (22ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (Size = 2000), @p4='?' (Size = 500), @p5='?' (Size = 100), @p6='?' (Size = 100), @p7='?' (DbType = Int32), @p8='?' (Size = 200)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Requests] ([Id], [DateCreated], [DateReviewed], [Description], [RejectionReason], [RequestedBy], [ReviewedBy], [Status], [Title])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+2026-05-16 03:25:49.867 +08:00 [ERR] An exception occurred in the database while saving changes for context type 'ApprovalRequest.Infrastructure.Persistence.AppDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'DateCreated'.
+Invalid column name 'DateReviewed'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:cd25f252-9725-4f85-b2ae-dbeb533ea6e8
+Error Number:207,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'DateCreated'.
+Invalid column name 'DateReviewed'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:cd25f252-9725-4f85-b2ae-dbeb533ea6e8
+Error Number:207,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2026-05-16 03:25:57.240 +08:00 [ERR] Error creating request 1
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'DateCreated'.
+Invalid column name 'DateReviewed'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:cd25f252-9725-4f85-b2ae-dbeb533ea6e8
+Error Number:207,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at ApprovalRequest.Infrastructure.Repositories.BaseRepository`1.AddAsync(T entity) in C:\Users\LEO\Documents\GitHub\ApprovalRequest\ApprovalRequest.Infrastructure\Repositories\BaseRepository.cs:line 26
+   at ApprovalRequest.Application.Services.RequestService.CreateAsync(CreateRequestDto dto) in C:\Users\LEO\Documents\GitHub\ApprovalRequest\ApprovalRequest.Application\Services\RequestService.cs:line 42
+2026-05-16 03:25:57.248 +08:00 [INF] Executing ObjectResult, writing value of type 'ApprovalRequest.Application.DTOs.Common.ApiResponse`1[[ApprovalRequest.Application.DTOs.Common.RequestDto, ApprovalRequest.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-05-16 03:25:57.250 +08:00 [INF] Executed action ApprovalRequest.Controllers.ApprovalController.Create (ApprovalRequest) in 21921.4285ms
+2026-05-16 03:25:57.252 +08:00 [INF] Executed endpoint 'ApprovalRequest.Controllers.ApprovalController.Create (ApprovalRequest)'
+2026-05-16 03:25:57.253 +08:00 [ERR] HTTP POST /api/Approval responded 500 in 21928.2312 ms
+2026-05-16 03:25:57.255 +08:00 [INF] Request finished HTTP/2 POST https://localhost:7216/api/Approval - 500 null application/json; charset=utf-8 21933.2484ms
+2026-05-16 03:36:06.072 +08:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-05-16 03:36:06.103 +08:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2026-05-16 03:36:06.104 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-05-16 03:36:06.105 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2026-05-16 03:36:06.117 +08:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2026-05-16 03:36:06.124 +08:00 [INF] Applying migration '20260515193531_approval-2'.
+2026-05-16 03:36:06.458 +08:00 [INF] Executed DbCommand (320ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_rename N'[Requests].[ReviewedAt]', N'DateReviewed', N'COLUMN';
+2026-05-16 03:36:06.460 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_rename N'[Requests].[CreatedAt]', N'DateCreated', N'COLUMN';
+2026-05-16 03:36:06.461 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20260515193531_approval-2', N'8.0.27');
+2026-05-16 03:36:12.501 +08:00 [INF] Now listening on: https://localhost:7216
+2026-05-16 03:36:12.531 +08:00 [INF] Now listening on: http://localhost:5105
+2026-05-16 03:36:12.621 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-05-16 03:36:12.622 +08:00 [INF] Hosting environment: Development
+2026-05-16 03:36:12.622 +08:00 [INF] Content root path: C:\Users\LEO\Documents\GitHub\ApprovalRequest\ApprovalRequest
+2026-05-16 03:36:13.000 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7216/swagger/index.html - null null
+2026-05-16 03:36:13.174 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7216/swagger/index.html - 200 null text/html;charset=utf-8 180.8334ms
+2026-05-16 03:36:13.197 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7216/_framework/aspnetcore-browser-refresh.js - null null
+2026-05-16 03:36:13.197 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7216/_vs/browserLink - null null
+2026-05-16 03:36:13.219 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7216/_framework/aspnetcore-browser-refresh.js - 200 16515 application/javascript; charset=utf-8 21.6872ms
+2026-05-16 03:36:13.256 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7216/_vs/browserLink - 200 null text/javascript; charset=UTF-8 59.1242ms
+2026-05-16 03:36:13.340 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7216/swagger/v1/swagger.json - null null
+2026-05-16 03:36:13.359 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7216/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 19.1329ms
+2026-05-16 03:36:20.802 +08:00 [INF] Request starting HTTP/2 POST https://localhost:7216/api/Approval - application/json 80
+2026-05-16 03:36:20.813 +08:00 [INF] Executing endpoint 'ApprovalRequest.Controllers.ApprovalController.Create (ApprovalRequest)'
+2026-05-16 03:36:20.839 +08:00 [INF] Route matched with {action = "Create", controller = "Approval"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(ApprovalRequest.Application.DTOs.Request.CreateRequestDto) on controller ApprovalRequest.Controllers.ApprovalController (ApprovalRequest).
+2026-05-16 03:36:21.456 +08:00 [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-05-16 03:36:27.829 +08:00 [INF] Creating request string1
+2026-05-16 03:36:30.007 +08:00 [INF] Executed DbCommand (49ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (Size = 2000), @p4='?' (Size = 500), @p5='?' (Size = 100), @p6='?' (Size = 100), @p7='?' (DbType = Int32), @p8='?' (Size = 200)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Requests] ([Id], [DateCreated], [DateReviewed], [Description], [RejectionReason], [RequestedBy], [ReviewedBy], [Status], [Title])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+2026-05-16 03:36:32.913 +08:00 [INF] Request created successfully string1
+2026-05-16 03:36:32.923 +08:00 [INF] Executing ObjectResult, writing value of type 'ApprovalRequest.Application.DTOs.Common.ApiResponse`1[[ApprovalRequest.Application.DTOs.Common.RequestDto, ApprovalRequest.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-05-16 03:36:32.944 +08:00 [INF] Executed action ApprovalRequest.Controllers.ApprovalController.Create (ApprovalRequest) in 12100.834ms
+2026-05-16 03:36:32.945 +08:00 [INF] Executed endpoint 'ApprovalRequest.Controllers.ApprovalController.Create (ApprovalRequest)'
+2026-05-16 03:36:32.948 +08:00 [INF] HTTP POST /api/Approval responded 201 in 12136.1269 ms
+2026-05-16 03:36:32.959 +08:00 [INF] Request finished HTTP/2 POST https://localhost:7216/api/Approval - 201 null application/json; charset=utf-8 12157.4014ms
+2026-05-16 03:36:53.476 +08:00 [INF] Request starting HTTP/2 POST https://localhost:7216/api/Approval - application/json 80
+2026-05-16 03:36:53.487 +08:00 [INF] Executing endpoint 'ApprovalRequest.Controllers.ApprovalController.Create (ApprovalRequest)'
+2026-05-16 03:36:53.488 +08:00 [INF] Route matched with {action = "Create", controller = "Approval"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(ApprovalRequest.Application.DTOs.Request.CreateRequestDto) on controller ApprovalRequest.Controllers.ApprovalController (ApprovalRequest).
+2026-05-16 03:36:55.078 +08:00 [INF] Creating request string2
+2026-05-16 03:36:55.093 +08:00 [INF] Executed DbCommand (10ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (Size = 2000), @p4='?' (Size = 500), @p5='?' (Size = 100), @p6='?' (Size = 100), @p7='?' (DbType = Int32), @p8='?' (Size = 200)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Requests] ([Id], [DateCreated], [DateReviewed], [Description], [RejectionReason], [RequestedBy], [ReviewedBy], [Status], [Title])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+2026-05-16 03:36:55.095 +08:00 [INF] Request created successfully string2
+2026-05-16 03:36:55.096 +08:00 [INF] Executing ObjectResult, writing value of type 'ApprovalRequest.Application.DTOs.Common.ApiResponse`1[[ApprovalRequest.Application.DTOs.Common.RequestDto, ApprovalRequest.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-05-16 03:36:55.097 +08:00 [INF] Executed action ApprovalRequest.Controllers.ApprovalController.Create (ApprovalRequest) in 1607.9966ms
+2026-05-16 03:36:55.099 +08:00 [INF] Executed endpoint 'ApprovalRequest.Controllers.ApprovalController.Create (ApprovalRequest)'
+2026-05-16 03:36:55.100 +08:00 [INF] HTTP POST /api/Approval responded 201 in 1612.7796 ms
+2026-05-16 03:36:55.102 +08:00 [INF] Request finished HTTP/2 POST https://localhost:7216/api/Approval - 201 null application/json; charset=utf-8 1625.832ms
+2026-05-16 03:37:10.533 +08:00 [INF] Request starting HTTP/2 POST https://localhost:7216/api/Approval - application/json 80
+2026-05-16 03:37:10.535 +08:00 [INF] Executing endpoint 'ApprovalRequest.Controllers.ApprovalController.Create (ApprovalRequest)'
+2026-05-16 03:37:10.536 +08:00 [INF] Route matched with {action = "Create", controller = "Approval"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(ApprovalRequest.Application.DTOs.Request.CreateRequestDto) on controller ApprovalRequest.Controllers.ApprovalController (ApprovalRequest).
+2026-05-16 03:37:13.671 +08:00 [INF] Creating request string3
+2026-05-16 03:37:13.679 +08:00 [INF] Executed DbCommand (6ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (Size = 2000), @p4='?' (Size = 500), @p5='?' (Size = 100), @p6='?' (Size = 100), @p7='?' (DbType = Int32), @p8='?' (Size = 200)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Requests] ([Id], [DateCreated], [DateReviewed], [Description], [RejectionReason], [RequestedBy], [ReviewedBy], [Status], [Title])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+2026-05-16 03:37:13.681 +08:00 [INF] Request created successfully string3
+2026-05-16 03:37:13.682 +08:00 [INF] Executing ObjectResult, writing value of type 'ApprovalRequest.Application.DTOs.Common.ApiResponse`1[[ApprovalRequest.Application.DTOs.Common.RequestDto, ApprovalRequest.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-05-16 03:37:13.683 +08:00 [INF] Executed action ApprovalRequest.Controllers.ApprovalController.Create (ApprovalRequest) in 3146.3683ms
+2026-05-16 03:37:13.686 +08:00 [INF] Executed endpoint 'ApprovalRequest.Controllers.ApprovalController.Create (ApprovalRequest)'
+2026-05-16 03:37:13.687 +08:00 [INF] HTTP POST /api/Approval responded 201 in 3151.9273 ms
+2026-05-16 03:37:13.688 +08:00 [INF] Request finished HTTP/2 POST https://localhost:7216/api/Approval - 201 null application/json; charset=utf-8 3155.8422ms
+2026-05-16 03:37:21.830 +08:00 [INF] Request starting HTTP/2 POST https://localhost:7216/api/Approval - application/json 80
+2026-05-16 03:37:21.832 +08:00 [INF] Executing endpoint 'ApprovalRequest.Controllers.ApprovalController.Create (ApprovalRequest)'
+2026-05-16 03:37:21.833 +08:00 [INF] Route matched with {action = "Create", controller = "Approval"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(ApprovalRequest.Application.DTOs.Request.CreateRequestDto) on controller ApprovalRequest.Controllers.ApprovalController (ApprovalRequest).
+2026-05-16 03:37:21.836 +08:00 [INF] Creating request string4
+2026-05-16 03:37:21.841 +08:00 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (Size = 2000), @p4='?' (Size = 500), @p5='?' (Size = 100), @p6='?' (Size = 100), @p7='?' (DbType = Int32), @p8='?' (Size = 200)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Requests] ([Id], [DateCreated], [DateReviewed], [Description], [RejectionReason], [RequestedBy], [ReviewedBy], [Status], [Title])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+2026-05-16 03:37:21.842 +08:00 [INF] Request created successfully string4
+2026-05-16 03:37:21.843 +08:00 [INF] Executing ObjectResult, writing value of type 'ApprovalRequest.Application.DTOs.Common.ApiResponse`1[[ApprovalRequest.Application.DTOs.Common.RequestDto, ApprovalRequest.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-05-16 03:37:21.844 +08:00 [INF] Executed action ApprovalRequest.Controllers.ApprovalController.Create (ApprovalRequest) in 9.4254ms
+2026-05-16 03:37:21.845 +08:00 [INF] Executed endpoint 'ApprovalRequest.Controllers.ApprovalController.Create (ApprovalRequest)'
+2026-05-16 03:37:21.846 +08:00 [INF] HTTP POST /api/Approval responded 201 in 13.6423 ms
+2026-05-16 03:37:21.847 +08:00 [INF] Request finished HTTP/2 POST https://localhost:7216/api/Approval - 201 null application/json; charset=utf-8 17.2646ms
+2026-05-16 03:37:30.718 +08:00 [INF] Request starting HTTP/2 POST https://localhost:7216/api/Approval - application/json 80
+2026-05-16 03:37:30.720 +08:00 [INF] Executing endpoint 'ApprovalRequest.Controllers.ApprovalController.Create (ApprovalRequest)'
+2026-05-16 03:37:30.721 +08:00 [INF] Route matched with {action = "Create", controller = "Approval"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(ApprovalRequest.Application.DTOs.Request.CreateRequestDto) on controller ApprovalRequest.Controllers.ApprovalController (ApprovalRequest).
+2026-05-16 03:37:30.723 +08:00 [INF] Creating request string5
+2026-05-16 03:37:30.733 +08:00 [INF] Executed DbCommand (8ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (Size = 2000), @p4='?' (Size = 500), @p5='?' (Size = 100), @p6='?' (Size = 100), @p7='?' (DbType = Int32), @p8='?' (Size = 200)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Requests] ([Id], [DateCreated], [DateReviewed], [Description], [RejectionReason], [RequestedBy], [ReviewedBy], [Status], [Title])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+2026-05-16 03:37:30.734 +08:00 [INF] Request created successfully string5
+2026-05-16 03:37:30.735 +08:00 [INF] Executing ObjectResult, writing value of type 'ApprovalRequest.Application.DTOs.Common.ApiResponse`1[[ApprovalRequest.Application.DTOs.Common.RequestDto, ApprovalRequest.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-05-16 03:37:30.736 +08:00 [INF] Executed action ApprovalRequest.Controllers.ApprovalController.Create (ApprovalRequest) in 13.6551ms
+2026-05-16 03:37:30.737 +08:00 [INF] Executed endpoint 'ApprovalRequest.Controllers.ApprovalController.Create (ApprovalRequest)'
+2026-05-16 03:37:30.738 +08:00 [INF] HTTP POST /api/Approval responded 201 in 17.4818 ms
+2026-05-16 03:37:30.739 +08:00 [INF] Request finished HTTP/2 POST https://localhost:7216/api/Approval - 201 null application/json; charset=utf-8 21.2601ms
+2026-05-16 03:37:49.168 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7216/api/Approval?PageNumber=1&PageSize=10 - null null
+2026-05-16 03:37:49.170 +08:00 [INF] Executing endpoint 'ApprovalRequest.Controllers.ApprovalController.GetAll (ApprovalRequest)'
+2026-05-16 03:37:49.176 +08:00 [INF] Route matched with {action = "GetAll", controller = "Approval"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(ApprovalRequest.Application.DTOs.Common.PaginationQuery) on controller ApprovalRequest.Controllers.ApprovalController (ApprovalRequest).
+2026-05-16 03:37:49.187 +08:00 [INF] Retrieving all requests with pagination: PageNumber=1, PageSize=10
+2026-05-16 03:37:49.425 +08:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Requests] AS [r]
+2026-05-16 03:37:49.487 +08:00 [INF] Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[DateCreated], [r].[DateReviewed], [r].[Description], [r].[RejectionReason], [r].[RequestedBy], [r].[ReviewedBy], [r].[Status], [r].[Title]
+FROM [Requests] AS [r]
+ORDER BY [r].[DateCreated] DESC
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-05-16 03:37:49.502 +08:00 [INF] Requests retrieved successfully with pagination: PageNumber=1, PageSize=10
+2026-05-16 03:37:49.503 +08:00 [INF] Executing ObjectResult, writing value of type 'ApprovalRequest.Application.DTOs.Common.PagedResponse`1[[ApprovalRequest.Application.DTOs.Common.RequestDto, ApprovalRequest.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-05-16 03:37:49.505 +08:00 [INF] Executed action ApprovalRequest.Controllers.ApprovalController.GetAll (ApprovalRequest) in 328.595ms
+2026-05-16 03:37:49.506 +08:00 [INF] Executed endpoint 'ApprovalRequest.Controllers.ApprovalController.GetAll (ApprovalRequest)'
+2026-05-16 03:37:49.507 +08:00 [INF] HTTP GET /api/Approval responded 200 in 337.1949 ms
+2026-05-16 03:37:49.509 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7216/api/Approval?PageNumber=1&PageSize=10 - 200 null application/json; charset=utf-8 340.7003ms
+2026-05-16 03:39:33.907 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7216/swagger/index.html - null null
+2026-05-16 03:39:33.919 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7216/swagger/index.html - 200 null text/html;charset=utf-8 12.5745ms
+2026-05-16 03:39:33.942 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7216/_vs/browserLink - null null
+2026-05-16 03:39:33.942 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7216/_framework/aspnetcore-browser-refresh.js - null null
+2026-05-16 03:39:33.952 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7216/_framework/aspnetcore-browser-refresh.js - 200 16515 application/javascript; charset=utf-8 10.358ms
+2026-05-16 03:39:33.966 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7216/_vs/browserLink - 200 null text/javascript; charset=UTF-8 23.6667ms
+2026-05-16 03:39:34.053 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7216/swagger/v1/swagger.json - null null
+2026-05-16 03:39:34.070 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7216/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 17.3835ms
+2026-05-16 03:39:45.368 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7216/api/Approval?PageNumber=1&PageSize=10 - null null
+2026-05-16 03:39:45.372 +08:00 [INF] Executing endpoint 'ApprovalRequest.Controllers.ApprovalController.GetAll (ApprovalRequest)'
+2026-05-16 03:39:45.378 +08:00 [INF] Route matched with {action = "GetAll", controller = "Approval"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(ApprovalRequest.Application.DTOs.Common.PaginationQuery) on controller ApprovalRequest.Controllers.ApprovalController (ApprovalRequest).
+2026-05-16 03:39:45.381 +08:00 [INF] Retrieving all requests with pagination: PageNumber=1, PageSize=10
+2026-05-16 03:39:45.385 +08:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Requests] AS [r]
+2026-05-16 03:39:45.390 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[DateCreated], [r].[DateReviewed], [r].[Description], [r].[RejectionReason], [r].[RequestedBy], [r].[ReviewedBy], [r].[Status], [r].[Title]
+FROM [Requests] AS [r]
+ORDER BY [r].[DateCreated] DESC
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-05-16 03:39:45.392 +08:00 [INF] Requests retrieved successfully with pagination: PageNumber=1, PageSize=10
+2026-05-16 03:39:45.393 +08:00 [INF] Executing ObjectResult, writing value of type 'ApprovalRequest.Application.DTOs.Common.PagedResponse`1[[ApprovalRequest.Application.DTOs.Common.RequestDto, ApprovalRequest.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-05-16 03:39:45.400 +08:00 [INF] Executed action ApprovalRequest.Controllers.ApprovalController.GetAll (ApprovalRequest) in 20.9567ms
+2026-05-16 03:39:45.401 +08:00 [INF] Executed endpoint 'ApprovalRequest.Controllers.ApprovalController.GetAll (ApprovalRequest)'
+2026-05-16 03:39:45.402 +08:00 [INF] HTTP GET /api/Approval responded 200 in 30.2631 ms
+2026-05-16 03:39:45.403 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7216/api/Approval?PageNumber=1&PageSize=10 - 200 null application/json; charset=utf-8 35.5001ms
+2026-05-16 03:40:21.490 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7216/api/Approval?PageNumber=1&PageSize=10 - null null
+2026-05-16 03:40:21.500 +08:00 [INF] Executing endpoint 'ApprovalRequest.Controllers.ApprovalController.GetAll (ApprovalRequest)'
+2026-05-16 03:40:21.500 +08:00 [INF] Route matched with {action = "GetAll", controller = "Approval"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(ApprovalRequest.Application.DTOs.Common.PaginationQuery) on controller ApprovalRequest.Controllers.ApprovalController (ApprovalRequest).
+2026-05-16 03:40:21.503 +08:00 [INF] Retrieving all requests with pagination: PageNumber=1, PageSize=10
+2026-05-16 03:40:21.507 +08:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Requests] AS [r]
+2026-05-16 03:40:21.514 +08:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[DateCreated], [r].[DateReviewed], [r].[Description], [r].[RejectionReason], [r].[RequestedBy], [r].[ReviewedBy], [r].[Status], [r].[Title]
+FROM [Requests] AS [r]
+ORDER BY [r].[DateCreated] DESC
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-05-16 03:40:21.515 +08:00 [INF] Requests retrieved successfully with pagination: PageNumber=1, PageSize=10
+2026-05-16 03:40:21.516 +08:00 [INF] Executing ObjectResult, writing value of type 'ApprovalRequest.Application.DTOs.Common.PagedResponse`1[[ApprovalRequest.Application.DTOs.Common.RequestDto, ApprovalRequest.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-05-16 03:40:21.517 +08:00 [INF] Executed action ApprovalRequest.Controllers.ApprovalController.GetAll (ApprovalRequest) in 15.3043ms
+2026-05-16 03:40:21.519 +08:00 [INF] Executed endpoint 'ApprovalRequest.Controllers.ApprovalController.GetAll (ApprovalRequest)'
+2026-05-16 03:40:21.519 +08:00 [INF] HTTP GET /api/Approval responded 200 in 19.7135 ms
+2026-05-16 03:40:21.520 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7216/api/Approval?PageNumber=1&PageSize=10 - 200 null application/json; charset=utf-8 30.0281ms
+2026-05-16 03:40:22.103 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7216/api/Approval?PageNumber=1&PageSize=10 - null null
+2026-05-16 03:40:22.106 +08:00 [INF] Executing endpoint 'ApprovalRequest.Controllers.ApprovalController.GetAll (ApprovalRequest)'
+2026-05-16 03:40:22.108 +08:00 [INF] Route matched with {action = "GetAll", controller = "Approval"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(ApprovalRequest.Application.DTOs.Common.PaginationQuery) on controller ApprovalRequest.Controllers.ApprovalController (ApprovalRequest).
+2026-05-16 03:40:22.110 +08:00 [INF] Retrieving all requests with pagination: PageNumber=1, PageSize=10
+2026-05-16 03:40:22.113 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Requests] AS [r]
+2026-05-16 03:40:22.116 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[DateCreated], [r].[DateReviewed], [r].[Description], [r].[RejectionReason], [r].[RequestedBy], [r].[ReviewedBy], [r].[Status], [r].[Title]
+FROM [Requests] AS [r]
+ORDER BY [r].[DateCreated] DESC
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-05-16 03:40:22.117 +08:00 [INF] Requests retrieved successfully with pagination: PageNumber=1, PageSize=10
+2026-05-16 03:40:22.119 +08:00 [INF] Executing ObjectResult, writing value of type 'ApprovalRequest.Application.DTOs.Common.PagedResponse`1[[ApprovalRequest.Application.DTOs.Common.RequestDto, ApprovalRequest.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-05-16 03:40:22.120 +08:00 [INF] Executed action ApprovalRequest.Controllers.ApprovalController.GetAll (ApprovalRequest) in 10.9441ms
+2026-05-16 03:40:22.123 +08:00 [INF] Executed endpoint 'ApprovalRequest.Controllers.ApprovalController.GetAll (ApprovalRequest)'
+2026-05-16 03:40:22.123 +08:00 [INF] HTTP GET /api/Approval responded 200 in 17.2544 ms
+2026-05-16 03:40:22.124 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7216/api/Approval?PageNumber=1&PageSize=10 - 200 null application/json; charset=utf-8 21.6368ms
+2026-05-16 03:40:22.321 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7216/api/Approval?PageNumber=1&PageSize=10 - null null
+2026-05-16 03:40:22.323 +08:00 [INF] Executing endpoint 'ApprovalRequest.Controllers.ApprovalController.GetAll (ApprovalRequest)'
+2026-05-16 03:40:22.324 +08:00 [INF] Route matched with {action = "GetAll", controller = "Approval"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(ApprovalRequest.Application.DTOs.Common.PaginationQuery) on controller ApprovalRequest.Controllers.ApprovalController (ApprovalRequest).
+2026-05-16 03:40:22.326 +08:00 [INF] Retrieving all requests with pagination: PageNumber=1, PageSize=10
+2026-05-16 03:40:22.328 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Requests] AS [r]
+2026-05-16 03:40:22.331 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[DateCreated], [r].[DateReviewed], [r].[Description], [r].[RejectionReason], [r].[RequestedBy], [r].[ReviewedBy], [r].[Status], [r].[Title]
+FROM [Requests] AS [r]
+ORDER BY [r].[DateCreated] DESC
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-05-16 03:40:22.332 +08:00 [INF] Requests retrieved successfully with pagination: PageNumber=1, PageSize=10
+2026-05-16 03:40:22.333 +08:00 [INF] Executing ObjectResult, writing value of type 'ApprovalRequest.Application.DTOs.Common.PagedResponse`1[[ApprovalRequest.Application.DTOs.Common.RequestDto, ApprovalRequest.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-05-16 03:40:22.334 +08:00 [INF] Executed action ApprovalRequest.Controllers.ApprovalController.GetAll (ApprovalRequest) in 9.0315ms
+2026-05-16 03:40:22.335 +08:00 [INF] Executed endpoint 'ApprovalRequest.Controllers.ApprovalController.GetAll (ApprovalRequest)'
+2026-05-16 03:40:22.336 +08:00 [INF] HTTP GET /api/Approval responded 200 in 13.1784 ms
+2026-05-16 03:40:22.340 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7216/api/Approval?PageNumber=1&PageSize=10 - 200 null application/json; charset=utf-8 18.727ms
+2026-05-16 03:40:22.509 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7216/api/Approval?PageNumber=1&PageSize=10 - null null
+2026-05-16 03:40:22.514 +08:00 [INF] Executing endpoint 'ApprovalRequest.Controllers.ApprovalController.GetAll (ApprovalRequest)'
+2026-05-16 03:40:22.515 +08:00 [INF] Route matched with {action = "GetAll", controller = "Approval"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(ApprovalRequest.Application.DTOs.Common.PaginationQuery) on controller ApprovalRequest.Controllers.ApprovalController (ApprovalRequest).
+2026-05-16 03:40:22.518 +08:00 [INF] Retrieving all requests with pagination: PageNumber=1, PageSize=10
+2026-05-16 03:40:22.521 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Requests] AS [r]
+2026-05-16 03:40:22.524 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[DateCreated], [r].[DateReviewed], [r].[Description], [r].[RejectionReason], [r].[RequestedBy], [r].[ReviewedBy], [r].[Status], [r].[Title]
+FROM [Requests] AS [r]
+ORDER BY [r].[DateCreated] DESC
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-05-16 03:40:22.525 +08:00 [INF] Requests retrieved successfully with pagination: PageNumber=1, PageSize=10
+2026-05-16 03:40:22.526 +08:00 [INF] Executing ObjectResult, writing value of type 'ApprovalRequest.Application.DTOs.Common.PagedResponse`1[[ApprovalRequest.Application.DTOs.Common.RequestDto, ApprovalRequest.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-05-16 03:40:22.527 +08:00 [INF] Executed action ApprovalRequest.Controllers.ApprovalController.GetAll (ApprovalRequest) in 10.0108ms
+2026-05-16 03:40:22.528 +08:00 [INF] Executed endpoint 'ApprovalRequest.Controllers.ApprovalController.GetAll (ApprovalRequest)'
+2026-05-16 03:40:22.528 +08:00 [INF] HTTP GET /api/Approval responded 200 in 13.9622 ms
+2026-05-16 03:40:22.530 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7216/api/Approval?PageNumber=1&PageSize=10 - 200 null application/json; charset=utf-8 20.872ms
+2026-05-16 03:40:22.676 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7216/api/Approval?PageNumber=1&PageSize=10 - null null
+2026-05-16 03:40:22.677 +08:00 [INF] Executing endpoint 'ApprovalRequest.Controllers.ApprovalController.GetAll (ApprovalRequest)'
+2026-05-16 03:40:22.678 +08:00 [INF] Route matched with {action = "GetAll", controller = "Approval"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(ApprovalRequest.Application.DTOs.Common.PaginationQuery) on controller ApprovalRequest.Controllers.ApprovalController (ApprovalRequest).
+2026-05-16 03:40:22.680 +08:00 [INF] Retrieving all requests with pagination: PageNumber=1, PageSize=10
+2026-05-16 03:40:22.684 +08:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Requests] AS [r]
+2026-05-16 03:40:22.687 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[DateCreated], [r].[DateReviewed], [r].[Description], [r].[RejectionReason], [r].[RequestedBy], [r].[ReviewedBy], [r].[Status], [r].[Title]
+FROM [Requests] AS [r]
+ORDER BY [r].[DateCreated] DESC
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-05-16 03:40:22.688 +08:00 [INF] Requests retrieved successfully with pagination: PageNumber=1, PageSize=10
+2026-05-16 03:40:22.689 +08:00 [INF] Executing ObjectResult, writing value of type 'ApprovalRequest.Application.DTOs.Common.PagedResponse`1[[ApprovalRequest.Application.DTOs.Common.RequestDto, ApprovalRequest.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-05-16 03:40:22.689 +08:00 [INF] Executed action ApprovalRequest.Controllers.ApprovalController.GetAll (ApprovalRequest) in 10.296ms
+2026-05-16 03:40:22.690 +08:00 [INF] Executed endpoint 'ApprovalRequest.Controllers.ApprovalController.GetAll (ApprovalRequest)'
+2026-05-16 03:40:22.691 +08:00 [INF] HTTP GET /api/Approval responded 200 in 13.4240 ms
+2026-05-16 03:40:22.692 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7216/api/Approval?PageNumber=1&PageSize=10 - 200 null application/json; charset=utf-8 16.5093ms
+2026-05-16 03:40:22.811 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7216/api/Approval?PageNumber=1&PageSize=10 - null null
+2026-05-16 03:40:22.814 +08:00 [INF] Executing endpoint 'ApprovalRequest.Controllers.ApprovalController.GetAll (ApprovalRequest)'
+2026-05-16 03:40:22.815 +08:00 [INF] Route matched with {action = "GetAll", controller = "Approval"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(ApprovalRequest.Application.DTOs.Common.PaginationQuery) on controller ApprovalRequest.Controllers.ApprovalController (ApprovalRequest).
+2026-05-16 03:40:22.817 +08:00 [INF] Retrieving all requests with pagination: PageNumber=1, PageSize=10
+2026-05-16 03:40:22.818 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Requests] AS [r]
+2026-05-16 03:40:22.822 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[DateCreated], [r].[DateReviewed], [r].[Description], [r].[RejectionReason], [r].[RequestedBy], [r].[ReviewedBy], [r].[Status], [r].[Title]
+FROM [Requests] AS [r]
+ORDER BY [r].[DateCreated] DESC
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-05-16 03:40:22.823 +08:00 [INF] Requests retrieved successfully with pagination: PageNumber=1, PageSize=10
+2026-05-16 03:40:22.824 +08:00 [INF] Executing ObjectResult, writing value of type 'ApprovalRequest.Application.DTOs.Common.PagedResponse`1[[ApprovalRequest.Application.DTOs.Common.RequestDto, ApprovalRequest.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-05-16 03:40:22.825 +08:00 [INF] Executed action ApprovalRequest.Controllers.ApprovalController.GetAll (ApprovalRequest) in 8.6656ms
+2026-05-16 03:40:22.825 +08:00 [INF] Executed endpoint 'ApprovalRequest.Controllers.ApprovalController.GetAll (ApprovalRequest)'
+2026-05-16 03:40:22.826 +08:00 [INF] HTTP GET /api/Approval responded 200 in 12.2913 ms
+2026-05-16 03:40:22.827 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7216/api/Approval?PageNumber=1&PageSize=10 - 200 null application/json; charset=utf-8 16.2792ms
+2026-05-16 03:40:53.498 +08:00 [INF] Now listening on: https://localhost:7216
+2026-05-16 03:40:53.523 +08:00 [INF] Now listening on: http://localhost:5105
+2026-05-16 03:40:53.594 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-05-16 03:40:53.594 +08:00 [INF] Hosting environment: Development
+2026-05-16 03:40:53.599 +08:00 [INF] Content root path: C:\Users\LEO\Documents\GitHub\ApprovalRequest\ApprovalRequest
+2026-05-16 03:40:53.991 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7216/swagger/index.html - null null
+2026-05-16 03:40:54.138 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7216/swagger/index.html - 200 null text/html;charset=utf-8 149.4495ms
+2026-05-16 03:40:54.157 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7216/_vs/browserLink - null null
+2026-05-16 03:40:54.157 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7216/_framework/aspnetcore-browser-refresh.js - null null
+2026-05-16 03:40:54.166 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7216/_framework/aspnetcore-browser-refresh.js - 200 16515 application/javascript; charset=utf-8 9.1271ms
+2026-05-16 03:40:54.198 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7216/_vs/browserLink - 200 null text/javascript; charset=UTF-8 41.3613ms
+2026-05-16 03:40:56.236 +08:00 [INF] Now listening on: https://localhost:7216
+2026-05-16 03:40:56.257 +08:00 [INF] Now listening on: http://localhost:5105
+2026-05-16 03:40:56.310 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-05-16 03:40:56.311 +08:00 [INF] Hosting environment: Development
+2026-05-16 03:40:56.311 +08:00 [INF] Content root path: C:\Users\LEO\Documents\GitHub\ApprovalRequest\ApprovalRequest
+2026-05-16 03:40:56.701 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7216/swagger/index.html - null null
+2026-05-16 03:40:56.814 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7216/swagger/index.html - 200 null text/html;charset=utf-8 114.2819ms
+2026-05-16 03:40:56.819 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7216/_framework/aspnetcore-browser-refresh.js - null null
+2026-05-16 03:40:56.825 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7216/_framework/aspnetcore-browser-refresh.js - 200 16515 application/javascript; charset=utf-8 6.3481ms
+2026-05-16 03:40:56.830 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7216/_vs/browserLink - null null
+2026-05-16 03:40:56.851 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7216/_vs/browserLink - 200 null text/javascript; charset=UTF-8 20.6463ms
+2026-05-16 03:40:56.975 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7216/swagger/v1/swagger.json - null null
+2026-05-16 03:40:56.987 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7216/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 12.0855ms
+2026-05-16 03:40:59.841 +08:00 [INF] Now listening on: https://localhost:7216
+2026-05-16 03:40:59.864 +08:00 [INF] Now listening on: http://localhost:5105
+2026-05-16 03:40:59.924 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-05-16 03:40:59.925 +08:00 [INF] Hosting environment: Development
+2026-05-16 03:40:59.925 +08:00 [INF] Content root path: C:\Users\LEO\Documents\GitHub\ApprovalRequest\ApprovalRequest
+2026-05-16 03:41:01.539 +08:00 [INF] Now listening on: https://localhost:7216
+2026-05-16 03:41:01.560 +08:00 [INF] Now listening on: http://localhost:5105
+2026-05-16 03:41:01.613 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-05-16 03:41:01.615 +08:00 [INF] Hosting environment: Development
+2026-05-16 03:41:01.615 +08:00 [INF] Content root path: C:\Users\LEO\Documents\GitHub\ApprovalRequest\ApprovalRequest
+2026-05-16 03:41:01.935 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7216/swagger/index.html - null null
+2026-05-16 03:41:02.035 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7216/swagger/index.html - 200 null text/html;charset=utf-8 101.6012ms
+2026-05-16 03:41:02.041 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7216/_framework/aspnetcore-browser-refresh.js - null null
+2026-05-16 03:41:02.047 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7216/_framework/aspnetcore-browser-refresh.js - 200 16515 application/javascript; charset=utf-8 5.8702ms
+2026-05-16 03:41:02.055 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7216/_vs/browserLink - null null
+2026-05-16 03:41:02.073 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7216/_vs/browserLink - 200 null text/javascript; charset=UTF-8 17.3479ms
+2026-05-16 03:41:02.181 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7216/swagger/v1/swagger.json - null null
+2026-05-16 03:41:02.190 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7216/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 8.7486ms
+2026-05-16 03:41:09.993 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7216/api/Approval?PageNumber=1&PageSize=10 - null null
+2026-05-16 03:41:10.001 +08:00 [INF] Executing endpoint 'ApprovalRequest.Controllers.ApprovalController.GetAll (ApprovalRequest)'
+2026-05-16 03:41:10.018 +08:00 [INF] Route matched with {action = "GetAll", controller = "Approval"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(ApprovalRequest.Application.DTOs.Common.PaginationQuery) on controller ApprovalRequest.Controllers.ApprovalController (ApprovalRequest).
+2026-05-16 03:41:10.452 +08:00 [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-05-16 03:41:10.466 +08:00 [INF] Retrieving all requests with pagination: PageNumber=1, PageSize=10
+2026-05-16 03:41:10.770 +08:00 [INF] Executed DbCommand (22ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Requests] AS [r]
+2026-05-16 03:41:10.843 +08:00 [INF] Executed DbCommand (12ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[DateCreated], [r].[DateReviewed], [r].[Description], [r].[RejectionReason], [r].[RequestedBy], [r].[ReviewedBy], [r].[Status], [r].[Title]
+FROM [Requests] AS [r]
+ORDER BY [r].[DateCreated] DESC
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-05-16 03:41:10.858 +08:00 [INF] Requests retrieved successfully with pagination: PageNumber=1, PageSize=10
+2026-05-16 03:41:10.862 +08:00 [INF] Executing ObjectResult, writing value of type 'ApprovalRequest.Application.DTOs.Common.PagedResponse`1[[ApprovalRequest.Application.DTOs.Common.RequestDto, ApprovalRequest.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-05-16 03:41:10.882 +08:00 [INF] Executed action ApprovalRequest.Controllers.ApprovalController.GetAll (ApprovalRequest) in 859.809ms
+2026-05-16 03:41:10.883 +08:00 [INF] Executed endpoint 'ApprovalRequest.Controllers.ApprovalController.GetAll (ApprovalRequest)'
+2026-05-16 03:41:10.888 +08:00 [INF] HTTP GET /api/Approval responded 200 in 886.9342 ms
+2026-05-16 03:41:10.895 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7216/api/Approval?PageNumber=1&PageSize=10 - 200 null application/json; charset=utf-8 902.052ms
+2026-05-16 03:41:29.525 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7216/api/Approval/aeba8532-83c7-4bc9-17e2-08deb2b942f3 - null null
+2026-05-16 03:41:29.529 +08:00 [INF] Executing endpoint 'ApprovalRequest.Controllers.ApprovalController.GetById (ApprovalRequest)'
+2026-05-16 03:41:29.534 +08:00 [INF] Route matched with {action = "GetById", controller = "Approval"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(System.Guid) on controller ApprovalRequest.Controllers.ApprovalController (ApprovalRequest).
+2026-05-16 03:41:29.574 +08:00 [INF] Retrieving request "aeba8532-83c7-4bc9-17e2-08deb2b942f3"
+2026-05-16 03:41:29.620 +08:00 [INF] Executed DbCommand (5ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[DateCreated], [r].[DateReviewed], [r].[Description], [r].[RejectionReason], [r].[RequestedBy], [r].[ReviewedBy], [r].[Status], [r].[Title]
+FROM [Requests] AS [r]
+WHERE [r].[Id] = @__get_Item_0
+2026-05-16 03:41:29.666 +08:00 [INF] Request "aeba8532-83c7-4bc9-17e2-08deb2b942f3" retrieved successfully
+2026-05-16 03:41:29.668 +08:00 [INF] Executing ObjectResult, writing value of type 'ApprovalRequest.Application.DTOs.Common.ApiResponse`1[[ApprovalRequest.Application.DTOs.Common.RequestDto, ApprovalRequest.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-05-16 03:41:29.671 +08:00 [INF] Executed action ApprovalRequest.Controllers.ApprovalController.GetById (ApprovalRequest) in 135.5553ms
+2026-05-16 03:41:29.673 +08:00 [INF] Executed endpoint 'ApprovalRequest.Controllers.ApprovalController.GetById (ApprovalRequest)'
+2026-05-16 03:41:29.674 +08:00 [INF] HTTP GET /api/Approval/aeba8532-83c7-4bc9-17e2-08deb2b942f3 responded 200 in 145.8306 ms
+2026-05-16 03:41:29.676 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7216/api/Approval/aeba8532-83c7-4bc9-17e2-08deb2b942f3 - 200 null application/json; charset=utf-8 150.7157ms
+2026-05-16 03:41:46.725 +08:00 [INF] Request starting HTTP/2 PUT https://localhost:7216/api/Approval/aeba8532-83c7-4bc9-17e2-08deb2b942f3/approve - application/json 72
+2026-05-16 03:41:46.728 +08:00 [INF] Executing endpoint 'ApprovalRequest.Controllers.ApprovalController.Approve (ApprovalRequest)'
+2026-05-16 03:41:46.732 +08:00 [INF] Route matched with {action = "Approve", controller = "Approval"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Approve(System.Guid, ApprovalRequest.Application.DTOs.Request.ApprovalActionDto) on controller ApprovalRequest.Controllers.ApprovalController (ApprovalRequest).
+2026-05-16 03:41:46.758 +08:00 [INF] Approving request "aeba8532-83c7-4bc9-17e2-08deb2b942f3"
+2026-05-16 03:41:46.761 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[DateCreated], [r].[DateReviewed], [r].[Description], [r].[RejectionReason], [r].[RequestedBy], [r].[ReviewedBy], [r].[Status], [r].[Title]
+FROM [Requests] AS [r]
+WHERE [r].[Id] = @__get_Item_0
+2026-05-16 03:41:46.822 +08:00 [INF] Executed DbCommand (7ms) [Parameters=[@p8='?' (DbType = Guid), @p0='?' (DbType = DateTime2), @p1='?' (DbType = DateTime2), @p2='?' (Size = 2000), @p3='?' (Size = 500), @p4='?' (Size = 100), @p5='?' (Size = 100), @p6='?' (DbType = Int32), @p7='?' (Size = 200)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Requests] SET [DateCreated] = @p0, [DateReviewed] = @p1, [Description] = @p2, [RejectionReason] = @p3, [RequestedBy] = @p4, [ReviewedBy] = @p5, [Status] = @p6, [Title] = @p7
+OUTPUT 1
+WHERE [Id] = @p8;
+2026-05-16 03:41:46.829 +08:00 [INF] Request approved successfully
+2026-05-16 03:41:46.830 +08:00 [INF] Executing ObjectResult, writing value of type 'ApprovalRequest.Application.DTOs.Common.ApiResponse'.
+2026-05-16 03:41:46.832 +08:00 [INF] Executed action ApprovalRequest.Controllers.ApprovalController.Approve (ApprovalRequest) in 99.2642ms
+2026-05-16 03:41:46.833 +08:00 [INF] Executed endpoint 'ApprovalRequest.Controllers.ApprovalController.Approve (ApprovalRequest)'
+2026-05-16 03:41:46.834 +08:00 [INF] HTTP PUT /api/Approval/aeba8532-83c7-4bc9-17e2-08deb2b942f3/approve responded 200 in 105.8442 ms
+2026-05-16 03:41:46.835 +08:00 [INF] Request finished HTTP/2 PUT https://localhost:7216/api/Approval/aeba8532-83c7-4bc9-17e2-08deb2b942f3/approve - 200 null application/json; charset=utf-8 109.7397ms
+2026-05-16 03:42:01.855 +08:00 [INF] Request starting HTTP/2 PUT https://localhost:7216/api/Approval/12945e6e-1f97-4d8b-17e1-08deb2b942f3/approve - application/json 72
+2026-05-16 03:42:01.857 +08:00 [INF] Executing endpoint 'ApprovalRequest.Controllers.ApprovalController.Approve (ApprovalRequest)'
+2026-05-16 03:42:01.858 +08:00 [INF] Route matched with {action = "Approve", controller = "Approval"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Approve(System.Guid, ApprovalRequest.Application.DTOs.Request.ApprovalActionDto) on controller ApprovalRequest.Controllers.ApprovalController (ApprovalRequest).
+2026-05-16 03:42:01.860 +08:00 [INF] Approving request "12945e6e-1f97-4d8b-17e1-08deb2b942f3"
+2026-05-16 03:42:01.864 +08:00 [INF] Executed DbCommand (2ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[DateCreated], [r].[DateReviewed], [r].[Description], [r].[RejectionReason], [r].[RequestedBy], [r].[ReviewedBy], [r].[Status], [r].[Title]
+FROM [Requests] AS [r]
+WHERE [r].[Id] = @__get_Item_0
+2026-05-16 03:42:01.870 +08:00 [INF] Executed DbCommand (3ms) [Parameters=[@p8='?' (DbType = Guid), @p0='?' (DbType = DateTime2), @p1='?' (DbType = DateTime2), @p2='?' (Size = 2000), @p3='?' (Size = 500), @p4='?' (Size = 100), @p5='?' (Size = 100), @p6='?' (DbType = Int32), @p7='?' (Size = 200)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Requests] SET [DateCreated] = @p0, [DateReviewed] = @p1, [Description] = @p2, [RejectionReason] = @p3, [RequestedBy] = @p4, [ReviewedBy] = @p5, [Status] = @p6, [Title] = @p7
+OUTPUT 1
+WHERE [Id] = @p8;
+2026-05-16 03:42:01.872 +08:00 [INF] Request approved successfully
+2026-05-16 03:42:01.873 +08:00 [INF] Executing ObjectResult, writing value of type 'ApprovalRequest.Application.DTOs.Common.ApiResponse'.
+2026-05-16 03:42:01.875 +08:00 [INF] Executed action ApprovalRequest.Controllers.ApprovalController.Approve (ApprovalRequest) in 15.4998ms
+2026-05-16 03:42:01.876 +08:00 [INF] Executed endpoint 'ApprovalRequest.Controllers.ApprovalController.Approve (ApprovalRequest)'
+2026-05-16 03:42:01.877 +08:00 [INF] HTTP PUT /api/Approval/12945e6e-1f97-4d8b-17e1-08deb2b942f3/approve responded 200 in 19.3882 ms
+2026-05-16 03:42:01.878 +08:00 [INF] Request finished HTTP/2 PUT https://localhost:7216/api/Approval/12945e6e-1f97-4d8b-17e1-08deb2b942f3/approve - 200 null application/json; charset=utf-8 22.885ms
+2026-05-16 03:43:03.094 +08:00 [INF] Request starting HTTP/2 PUT https://localhost:7216/api/Approval/12945e6e-1f97-4d8b-17e1-08deb2b942f3/approve - application/json 72
+2026-05-16 03:43:03.097 +08:00 [INF] Executing endpoint 'ApprovalRequest.Controllers.ApprovalController.Approve (ApprovalRequest)'
+2026-05-16 03:43:03.097 +08:00 [INF] Route matched with {action = "Approve", controller = "Approval"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Approve(System.Guid, ApprovalRequest.Application.DTOs.Request.ApprovalActionDto) on controller ApprovalRequest.Controllers.ApprovalController (ApprovalRequest).
+2026-05-16 03:43:03.100 +08:00 [INF] Approving request "12945e6e-1f97-4d8b-17e1-08deb2b942f3"
+2026-05-16 03:43:03.103 +08:00 [INF] Executed DbCommand (2ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[DateCreated], [r].[DateReviewed], [r].[Description], [r].[RejectionReason], [r].[RequestedBy], [r].[ReviewedBy], [r].[Status], [r].[Title]
+FROM [Requests] AS [r]
+WHERE [r].[Id] = @__get_Item_0
+2026-05-16 03:43:03.111 +08:00 [INF] Executed DbCommand (7ms) [Parameters=[@p8='?' (DbType = Guid), @p0='?' (DbType = DateTime2), @p1='?' (DbType = DateTime2), @p2='?' (Size = 2000), @p3='?' (Size = 500), @p4='?' (Size = 100), @p5='?' (Size = 100), @p6='?' (DbType = Int32), @p7='?' (Size = 200)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Requests] SET [DateCreated] = @p0, [DateReviewed] = @p1, [Description] = @p2, [RejectionReason] = @p3, [RequestedBy] = @p4, [ReviewedBy] = @p5, [Status] = @p6, [Title] = @p7
+OUTPUT 1
+WHERE [Id] = @p8;
+2026-05-16 03:43:03.113 +08:00 [INF] Request approved successfully
+2026-05-16 03:43:03.114 +08:00 [INF] Executing ObjectResult, writing value of type 'ApprovalRequest.Application.DTOs.Common.ApiResponse'.
+2026-05-16 03:43:03.115 +08:00 [INF] Executed action ApprovalRequest.Controllers.ApprovalController.Approve (ApprovalRequest) in 16.0493ms
+2026-05-16 03:43:03.116 +08:00 [INF] Executed endpoint 'ApprovalRequest.Controllers.ApprovalController.Approve (ApprovalRequest)'
+2026-05-16 03:43:03.116 +08:00 [INF] HTTP PUT /api/Approval/12945e6e-1f97-4d8b-17e1-08deb2b942f3/approve responded 200 in 19.6716 ms
+2026-05-16 03:43:03.117 +08:00 [INF] Request finished HTTP/2 PUT https://localhost:7216/api/Approval/12945e6e-1f97-4d8b-17e1-08deb2b942f3/approve - 200 null application/json; charset=utf-8 22.927ms
+2026-05-16 03:45:53.427 +08:00 [INF] Request starting HTTP/2 PUT https://localhost:7216/api/Approval/12945e6e-1f97-4d8b-17e1-08deb2b942f3/reject - application/json 73
+2026-05-16 03:45:53.429 +08:00 [INF] Executing endpoint 'ApprovalRequest.Controllers.ApprovalController.Reject (ApprovalRequest)'
+2026-05-16 03:45:53.432 +08:00 [INF] Route matched with {action = "Reject", controller = "Approval"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Reject(System.Guid, ApprovalRequest.Application.DTOs.Request.ApprovalActionDto) on controller ApprovalRequest.Controllers.ApprovalController (ApprovalRequest).
+2026-05-16 03:45:53.434 +08:00 [INF] Rejecting request "12945e6e-1f97-4d8b-17e1-08deb2b942f3"
+2026-05-16 03:45:53.437 +08:00 [INF] Executed DbCommand (2ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[DateCreated], [r].[DateReviewed], [r].[Description], [r].[RejectionReason], [r].[RequestedBy], [r].[ReviewedBy], [r].[Status], [r].[Title]
+FROM [Requests] AS [r]
+WHERE [r].[Id] = @__get_Item_0
+2026-05-16 03:45:53.441 +08:00 [INF] Executed DbCommand (2ms) [Parameters=[@p8='?' (DbType = Guid), @p0='?' (DbType = DateTime2), @p1='?' (DbType = DateTime2), @p2='?' (Size = 2000), @p3='?' (Size = 500), @p4='?' (Size = 100), @p5='?' (Size = 100), @p6='?' (DbType = Int32), @p7='?' (Size = 200)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Requests] SET [DateCreated] = @p0, [DateReviewed] = @p1, [Description] = @p2, [RejectionReason] = @p3, [RequestedBy] = @p4, [ReviewedBy] = @p5, [Status] = @p6, [Title] = @p7
+OUTPUT 1
+WHERE [Id] = @p8;
+2026-05-16 03:45:53.443 +08:00 [INF] Request rejected successfully
+2026-05-16 03:45:53.443 +08:00 [INF] Executing ObjectResult, writing value of type 'ApprovalRequest.Application.DTOs.Common.ApiResponse'.
+2026-05-16 03:45:53.445 +08:00 [INF] Executed action ApprovalRequest.Controllers.ApprovalController.Reject (ApprovalRequest) in 11.6397ms
+2026-05-16 03:45:53.446 +08:00 [INF] Executed endpoint 'ApprovalRequest.Controllers.ApprovalController.Reject (ApprovalRequest)'
+2026-05-16 03:45:53.447 +08:00 [INF] HTTP PUT /api/Approval/12945e6e-1f97-4d8b-17e1-08deb2b942f3/reject responded 200 in 17.8469 ms
+2026-05-16 03:45:53.448 +08:00 [INF] Request finished HTTP/2 PUT https://localhost:7216/api/Approval/12945e6e-1f97-4d8b-17e1-08deb2b942f3/reject - 200 null application/json; charset=utf-8 20.7097ms
+2026-05-16 03:45:56.225 +08:00 [INF] Request starting HTTP/2 PUT https://localhost:7216/api/Approval/12945e6e-1f97-4d8b-17e1-08deb2b942f3/reject - application/json 73
+2026-05-16 03:45:56.227 +08:00 [INF] Executing endpoint 'ApprovalRequest.Controllers.ApprovalController.Reject (ApprovalRequest)'
+2026-05-16 03:45:56.227 +08:00 [INF] Route matched with {action = "Reject", controller = "Approval"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Reject(System.Guid, ApprovalRequest.Application.DTOs.Request.ApprovalActionDto) on controller ApprovalRequest.Controllers.ApprovalController (ApprovalRequest).
+2026-05-16 03:45:56.230 +08:00 [INF] Rejecting request "12945e6e-1f97-4d8b-17e1-08deb2b942f3"
+2026-05-16 03:45:56.233 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[DateCreated], [r].[DateReviewed], [r].[Description], [r].[RejectionReason], [r].[RequestedBy], [r].[ReviewedBy], [r].[Status], [r].[Title]
+FROM [Requests] AS [r]
+WHERE [r].[Id] = @__get_Item_0
+2026-05-16 03:45:56.236 +08:00 [INF] Executed DbCommand (2ms) [Parameters=[@p8='?' (DbType = Guid), @p0='?' (DbType = DateTime2), @p1='?' (DbType = DateTime2), @p2='?' (Size = 2000), @p3='?' (Size = 500), @p4='?' (Size = 100), @p5='?' (Size = 100), @p6='?' (DbType = Int32), @p7='?' (Size = 200)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Requests] SET [DateCreated] = @p0, [DateReviewed] = @p1, [Description] = @p2, [RejectionReason] = @p3, [RequestedBy] = @p4, [ReviewedBy] = @p5, [Status] = @p6, [Title] = @p7
+OUTPUT 1
+WHERE [Id] = @p8;
+2026-05-16 03:45:56.237 +08:00 [INF] Request rejected successfully
+2026-05-16 03:45:56.238 +08:00 [INF] Executing ObjectResult, writing value of type 'ApprovalRequest.Application.DTOs.Common.ApiResponse'.
+2026-05-16 03:45:56.239 +08:00 [INF] Executed action ApprovalRequest.Controllers.ApprovalController.Reject (ApprovalRequest) in 10.3392ms
+2026-05-16 03:45:56.240 +08:00 [INF] Executed endpoint 'ApprovalRequest.Controllers.ApprovalController.Reject (ApprovalRequest)'
+2026-05-16 03:45:56.240 +08:00 [INF] HTTP PUT /api/Approval/12945e6e-1f97-4d8b-17e1-08deb2b942f3/reject responded 200 in 13.6443 ms
+2026-05-16 03:45:56.241 +08:00 [INF] Request finished HTTP/2 PUT https://localhost:7216/api/Approval/12945e6e-1f97-4d8b-17e1-08deb2b942f3/reject - 200 null application/json; charset=utf-8 16.7663ms
+2026-05-16 03:46:11.409 +08:00 [INF] Request starting HTTP/2 PUT https://localhost:7216/api/Approval/12945e6e-1f97-4d8b-17e1-08deb2b942f3/approve - application/json 73
+2026-05-16 03:46:11.411 +08:00 [INF] Executing endpoint 'ApprovalRequest.Controllers.ApprovalController.Approve (ApprovalRequest)'
+2026-05-16 03:46:11.412 +08:00 [INF] Route matched with {action = "Approve", controller = "Approval"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Approve(System.Guid, ApprovalRequest.Application.DTOs.Request.ApprovalActionDto) on controller ApprovalRequest.Controllers.ApprovalController (ApprovalRequest).
+2026-05-16 03:46:11.414 +08:00 [INF] Approving request "12945e6e-1f97-4d8b-17e1-08deb2b942f3"
+2026-05-16 03:46:11.415 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[DateCreated], [r].[DateReviewed], [r].[Description], [r].[RejectionReason], [r].[RequestedBy], [r].[ReviewedBy], [r].[Status], [r].[Title]
+FROM [Requests] AS [r]
+WHERE [r].[Id] = @__get_Item_0
+2026-05-16 03:46:11.422 +08:00 [INF] Executed DbCommand (5ms) [Parameters=[@p8='?' (DbType = Guid), @p0='?' (DbType = DateTime2), @p1='?' (DbType = DateTime2), @p2='?' (Size = 2000), @p3='?' (Size = 500), @p4='?' (Size = 100), @p5='?' (Size = 100), @p6='?' (DbType = Int32), @p7='?' (Size = 200)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Requests] SET [DateCreated] = @p0, [DateReviewed] = @p1, [Description] = @p2, [RejectionReason] = @p3, [RequestedBy] = @p4, [ReviewedBy] = @p5, [Status] = @p6, [Title] = @p7
+OUTPUT 1
+WHERE [Id] = @p8;
+2026-05-16 03:46:11.423 +08:00 [INF] Request approved successfully
+2026-05-16 03:46:11.424 +08:00 [INF] Executing ObjectResult, writing value of type 'ApprovalRequest.Application.DTOs.Common.ApiResponse'.
+2026-05-16 03:46:11.425 +08:00 [INF] Executed action ApprovalRequest.Controllers.ApprovalController.Approve (ApprovalRequest) in 11.6378ms
+2026-05-16 03:46:11.425 +08:00 [INF] Executed endpoint 'ApprovalRequest.Controllers.ApprovalController.Approve (ApprovalRequest)'
+2026-05-16 03:46:11.426 +08:00 [INF] HTTP PUT /api/Approval/12945e6e-1f97-4d8b-17e1-08deb2b942f3/approve responded 200 in 15.5669 ms
+2026-05-16 03:46:11.427 +08:00 [INF] Request finished HTTP/2 PUT https://localhost:7216/api/Approval/12945e6e-1f97-4d8b-17e1-08deb2b942f3/approve - 200 null application/json; charset=utf-8 18.6266ms
+2026-05-16 03:46:18.217 +08:00 [INF] Request starting HTTP/2 PUT https://localhost:7216/api/Approval/12945e6e-1f97-4d8b-17e1-08deb2b942f3/reject - application/json 73
+2026-05-16 03:46:18.220 +08:00 [INF] Executing endpoint 'ApprovalRequest.Controllers.ApprovalController.Reject (ApprovalRequest)'
+2026-05-16 03:46:18.221 +08:00 [INF] Route matched with {action = "Reject", controller = "Approval"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Reject(System.Guid, ApprovalRequest.Application.DTOs.Request.ApprovalActionDto) on controller ApprovalRequest.Controllers.ApprovalController (ApprovalRequest).
+2026-05-16 03:46:18.222 +08:00 [INF] Rejecting request "12945e6e-1f97-4d8b-17e1-08deb2b942f3"
+2026-05-16 03:46:18.224 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[DateCreated], [r].[DateReviewed], [r].[Description], [r].[RejectionReason], [r].[RequestedBy], [r].[ReviewedBy], [r].[Status], [r].[Title]
+FROM [Requests] AS [r]
+WHERE [r].[Id] = @__get_Item_0
+2026-05-16 03:46:18.228 +08:00 [INF] Executed DbCommand (2ms) [Parameters=[@p8='?' (DbType = Guid), @p0='?' (DbType = DateTime2), @p1='?' (DbType = DateTime2), @p2='?' (Size = 2000), @p3='?' (Size = 500), @p4='?' (Size = 100), @p5='?' (Size = 100), @p6='?' (DbType = Int32), @p7='?' (Size = 200)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Requests] SET [DateCreated] = @p0, [DateReviewed] = @p1, [Description] = @p2, [RejectionReason] = @p3, [RequestedBy] = @p4, [ReviewedBy] = @p5, [Status] = @p6, [Title] = @p7
+OUTPUT 1
+WHERE [Id] = @p8;
+2026-05-16 03:46:18.230 +08:00 [INF] Request rejected successfully
+2026-05-16 03:46:18.231 +08:00 [INF] Executing ObjectResult, writing value of type 'ApprovalRequest.Application.DTOs.Common.ApiResponse'.
+2026-05-16 03:46:18.232 +08:00 [INF] Executed action ApprovalRequest.Controllers.ApprovalController.Reject (ApprovalRequest) in 9.8657ms
+2026-05-16 03:46:18.233 +08:00 [INF] Executed endpoint 'ApprovalRequest.Controllers.ApprovalController.Reject (ApprovalRequest)'
+2026-05-16 03:46:18.233 +08:00 [INF] HTTP PUT /api/Approval/12945e6e-1f97-4d8b-17e1-08deb2b942f3/reject responded 200 in 13.1533 ms
+2026-05-16 03:46:18.234 +08:00 [INF] Request finished HTTP/2 PUT https://localhost:7216/api/Approval/12945e6e-1f97-4d8b-17e1-08deb2b942f3/reject - 200 null application/json; charset=utf-8 16.7885ms

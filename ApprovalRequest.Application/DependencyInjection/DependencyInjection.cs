@@ -1,4 +1,6 @@
-﻿using ApprovalRequest.Application.Interfaces.Services;
+﻿using ApprovalRequest.Application.Interfaces.Repositories;
+using ApprovalRequest.Application.Interfaces.Services;
+using ApprovalRequest.Application.MappingProfiles;
 using ApprovalRequest.Application.Services;
 using ApprovalRequest.Application.Validators;
 using FluentValidation;
@@ -17,6 +19,14 @@ public static class DependencyInjection
         this IServiceCollection services)
     {
         services.AddValidatorsFromAssemblyContaining<CreateRequestValidator>();
+
+        services.AddAutoMapper(cfg =>
+        {
+            cfg.AddProfile<RequestMappingProfile>();
+        });
+
+
+        services.AddScoped<IRequestService, RequestService>();
 
 
         return services;

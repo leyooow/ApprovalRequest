@@ -14,7 +14,7 @@ public interface IRequestService
 
     Task<ApiResponse<RequestDto>?> GetByIdAsync(Guid id);
 
-    Task<PagedResponse<RequestDto>> GetAllAsync(PaginationQuery query);
+    Task<PagedResponse<RequestDto>> GetPaginatedDataAsync(int pageNumber, int pageSize);
 
     Task<ApiResponse> ApprovalAsync(Guid id, ApprovalActionDto request);
 

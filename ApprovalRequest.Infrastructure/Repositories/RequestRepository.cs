@@ -1,4 +1,5 @@
-﻿using ApprovalRequest.Application.Interfaces.Repositories;
+﻿using ApprovalRequest.Application.DTOs.Common;
+using ApprovalRequest.Application.Interfaces.Repositories;
 using ApprovalRequest.Domain.Entities;
 using ApprovalRequest.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
@@ -16,13 +17,25 @@ public class RequestRepository
         _context = context;
     }
 
-    public async Task<List<Request>> GetAllWithDetailsAsync(int pageNumber, int pageSize)
+    public async Task<PagedResponse<Request>> GetPaginatedDataAsync(int pageNumber, int pageSize)
     {
-        return await _context.Requests
+        var totalRecords = await _context.Requests.CountAsync();
+        var totalPages = (int)Math.Ceiling((double)totalRecords / pageSize);
+
+        var items = await _context.Requests
             .AsNoTracking()
             .OrderByDescending(x => x.DateCreated)
             .Skip((pageNumber - 1) * pageSize)
             .Take(pageSize)
             .ToListAsync();
+
+        return new PagedResponse<Request>
+        {
+            Items = items,
+            TotalRecords = totalRecords,
+            TotalPages = totalPages
+        };
     }
+
+
 }
